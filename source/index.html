@@ -4,9 +4,382 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Дизайн интерьеров</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <title>BRUME | Дизайн интерьеров</title>
 </head>
-<body>
-  <h1>Дизайн интерьеров</h1>
+<body class="page">
+  <header class="header page__header">
+    <div class="header__container centerer">
+      <div class="logo header__logo">
+        <picture class="logo__picture">
+          <img class="logo__image" src="img/logo/logo-mobile.png" alt="Логотип компании">
+        </picture>
+        <!-- <img class="logo__image" src="img/logo.svg" alt=""> -->
+      </div>
+
+      <nav class="menu header__menu">
+        <button class="menu__toggle menu__toggle--off" type="button">Меню</button>
+
+        <div class="menu__container">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Преимущества</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Наши услуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <p class="header__phone header__phone--icon-phone">+0 (000) 000 00 00</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="visually-hidden">Сайт дизайн-студии интерьеров «BRUME»</h1>
+
+    <section class="intro">
+      <div class="intro__container centerer">
+        <div class="intro__main">
+          <h2 class="intro__title">
+            Дизайн интерьеров
+          </h2>
+
+          <p class="intro__text">
+            Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+          </p>
+
+          <a class="btn intro__btn intro__btn--icon-arrow" href="#">Заказать дизайн</a>
+
+          <ul class="socials intro__socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#">Мы в Вконтакте</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Мы в <span lang="en">Instagram</span></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">Мы в <span lang="en">Facebook</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="intro__slides">
+          <ul class="intro__slides-list">
+            <li class="intro__slide intro__slide--active">
+              <picture>
+                <img src="img/intro/mobile/slide-1.jpg" alt="Первый слайд карусельки">
+              </picture>
+            </li>
+          </ul>
+          <div class="switches intro__switches" aria-hidden="true">
+            <button type="button" class="switch switch--active"></button>
+            <button type="button" class="switch"></button>
+            <button type="button" class="switch"></button>
+            <button type="button" class="switch"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__container centerer">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <ol class="features__list">
+          <li class="features__item">
+            <b class="features__item-number" aria-hidden="true">01</b>
+            <h3 class="features__item-title">Берем весь ремонт на себя</h3>
+            <p class="features__item-text">Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом</p>
+          </li>
+
+          <li class="features__item">
+            <b class="features__item-number" aria-hidden="true">02</b>
+            <h3 class="features__item-title">Мы - профессионалы своего дела</h3>
+            <p class="features__item-text">Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги, а студия уже реализовала свыше 1000 дизайн-проектов</p>
+          </li>
+
+          <li class="features__item">
+            <b class="features__item-number" aria-hidden="true">03</b>
+            <h3 class="features__item-title">Наши проекты индивидуальны</h3>
+            <p class="features__item-text">Каждый, созданный студией, интерьер - индивидуальное и максимально продуманное решение для каждого вида помещения</p>
+          </li>
+
+          <li class="features__item">
+            <b class="features__item-number" aria-hidden="true">04</b>
+            <h3 class="features__item-title">Рабoтаем на выгодных условиях</h3>
+            <p class="features__item-text">Ценовая политика студии очень лояльна, мы осуществляем контроль всего процесса работы и получаем результат который делает клиентов счастивыми</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="portfolio__container centerer">
+        <h2 class="portfolio__title">Портфолио</h2>
+
+        <ul class="portfolio__tabs">
+          <li class="portfolio__tab portfolio__tab--all portfolio__tab--active">
+            <a href="" class="portfolio__tab-link">Все проекты</a>
+          </li>
+          <li class="portfolio__tab portfolio__tab--design">
+            <a href="" class="portfolio__tab-link">Дизайн интерьеров</a>
+          </li>
+          <li class="portfolio__tab portfolio__tab--finishing">
+            <a href="" class="portfolio__tab-link">Отделочные работы</a>
+          </li>
+        </ul>
+
+        <ul class="portfolio__carousel">
+          <li class="portfolio__slide portfolio__slide--design">
+            <a href="" class="portfolio__slide-link">
+              <h3 class="portfolio__slide-title">Дизайн интерьера гостиной</h3>
+              <picture class="portfolio__slide-picture">
+                <img src="img/portfolio/mobile/slide-1.png" alt="Пример работы" class="portfolio__slide-image">
+              </picture>
+            </a>
+          </li>
+          <li class="portfolio__slide portfolio__slide--design">
+            <a href="" class="portfolio__slide-link">
+              <h3 class="portfolio__slide-title">Название работы</h3>
+              <picture class="portfolio__slide-picture">
+                <img src="img/portfolio/mobile/slide-2.png" alt="Пример работы" class="portfolio__slide-image">
+              </picture>
+            </a>
+          </li>
+          <li class="portfolio__slide portfolio__slide--design">
+            <a href="" class="portfolio__slide-link">
+              <h3 class="portfolio__slide-title">Дизайн столовой в стиле «Бохо»</h3>
+              <picture class="portfolio__slide-picture">
+                <img src="img/portfolio/mobile/slide-3.png" alt="Пример работы" class="portfolio__slide-image">
+              </picture>
+            </a>
+          </li>
+          <li class="portfolio__slide portfolio__slide--design">
+            <a href="" class="portfolio__slide-link">
+              <h3 class="portfolio__slide-title">Лофт интерьер для отеля Hiloft</h3>
+              <picture class="portfolio__slide-picture">
+                <img src="img/portfolio/mobile/slide-4.png" alt="Пример работы" class="portfolio__slide-image">
+              </picture>
+            </a>
+          </li>
+        </ul>
+
+        <div class="portfolio__carousel-btns">
+          <button class="portfolio__carousel-btn portfolio__carousel-btn--prev" type="button">
+            <span class="visually-hidden">Предыдущий</span>
+          </button>
+          <button class="portfolio__carousel-btn portfolio__carousel-btn--next" type="button">
+            <span class="visually-hidden">Следующий</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="services__container centerer">
+        <h2 class="services__title">Наши услуги</h2>
+
+        <!-- Ссылки добавлены на случай отключенного JS -->
+        <ul class="services__tabs">
+          <li class="services__tab">
+            <a href="#" class="services__tab-link">Дизайн жилого помещения</a>
+          </li>
+          <li class="services__tab">
+            <a href="#" class="services__tab-link">Дизайн отельных комнат</a>
+          </li>
+          <li class="services__tab services__tab--commercial services__tab--active">
+            <a href="#" class="services__tab-link">Дизайн коммерческих объектов</a>
+          </li>
+          <li class="services__tab">
+            <a href="#" class="services__tab-link">Ремонт под ключ</a>
+          </li>
+          <li class="services__tab">
+            <a href="#" class="services__tab-link">Отделочные работы</a>
+          </li>
+          <li class="services__tab">
+            <a href="#" class="services__tab-link">Выезд дизайнера на дом</a>
+          </li>
+        </ul>
+
+        <div class="services__item services__item--commercial services__item--active">
+          <h3 class="services__item-title">Дизайн коммерческих объектов</h3>
+          <p class="services__item-description">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова.</p>
+          <p class="services__item-count">532 проекта</p>
+          <a class="btn services__btn" href="#">Консультация</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video">
+      <div class="video__container centerer">
+        <h2 class="video__title">О студии дизайна интерьеров BRUME за 2 минуты</h2>
+
+        <video src=""></video>
+      </div>
+    </section>
+
+    <section class="stages">
+      <div class="stages__container centerer">
+        <h2 class="stages__title">Этапы работы</h2>
+
+        <ol class="stages__list">
+          <li class="stages__stage">
+            <b class="stages__stage-number" aria-hidden="true">1</b>
+            <h3 class="stages__stage-title">Консультация</h3>
+            <p class="stages__stage-description">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
+          </li>
+
+          <li class="stages__stage">
+            <b class="stages__stage-number" aria-hidden="true">2</b>
+            <h3 class="stages__stage-title">Техническое задание</h3>
+            <p class="stages__stage-description">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
+          </li>
+
+          <li class="stages__stage">
+            <b class="stages__stage-number" aria-hidden="true">3</b>
+            <h3 class="stages__stage-title">Замеры и планировка</h3>
+            <p class="stages__stage-description">Фиксируем размеры стен, окон, плинтусов, дверных проемов для эффективной работы</p>
+          </li>
+
+          <li class="stages__stage">
+            <b class="stages__stage-number" aria-hidden="true">4</b>
+            <h3 class="stages__stage-title">Дизайн-концепция</h3>
+            <p class="stages__stage-description">Создаем концепцию на основе пожеланий клиента, его образов и ощущений. Подбираем мебель.</p>
+          </li>
+
+          <li class="stages__stage">
+            <b class="stages__stage-number" aria-hidden="true">5</b>
+            <h3 class="stages__stage-title">3D Визуализация</h3>
+            <p class="stages__stage-description">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам.</p>
+          </li>
+
+          <li class="stages__stage">
+            <b class="stages__stage-number" aria-hidden="true">6</b>
+            <h3 class="stages__stage-title">Комплектация интерьера</h3>
+            <p class="stages__stage-description">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="connection">
+      <div class="connection__container centerer">
+        <h2 class="visually-hidden">Связь</h2>
+        <b class="connection__question">Мечтаете об интерьере от BRUME?</b>
+        <p class="connection__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+
+        <form class="connection__form" action="" method="POST">
+          <!-- autocomplete:off для удобства разработчика -->
+          <label class="connection__form-label">
+            <span class="visually-hidden">Имя</span>
+            <input type="text" name="name" placeholder="Имя*" autocomplete="off">
+          </label>
+          <label class="connection__form-label">
+            <span class="visually-hidden">Телефон</span>
+            <input type="tel" name="phone" placeholder="Телефон*" autocomplete="off">
+          </label>
+          <label class="connection__form-label">
+            <span class="visually-hidden" lang="en">E-mail</span>
+            <input type="email" name="email" placeholder="E-mail" autocomplete="off">
+          </label>
+
+          <button class="btn connection__form-btn" type="submit">Отправить</button>
+        </form>
+
+        <p class="connection__note">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="reviews__container centerer">
+        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+
+        <div class="reviews__carousel">
+          <ul class="reviews__list">
+            <!--
+            <li class="reviews__review">
+              <h3 class="reviews__review-title"></h3>
+              <b class="reviews__review-service"></b>
+              <p class="reviews__review-text"></p>
+            </li>
+            -->
+            <li class="reviews__review">
+              <h3 class="reviews__review-title">Александра Холодная</h3>
+              <picture class="reviews__picture">
+                <img class="reviews__image" src="img/reviews/holodnaya.jpg" alt="Фото Александры Холодной">
+              </picture>
+              <b class="reviews__review-service">Услуга: интерьер детской</b>
+              <p class="reviews__review-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!</p>
+            </li>
+            <!--
+            <li class="reviews__review">
+              <h3 class="reviews__review-title"></h3>
+              <b class="reviews__review-service"></b>
+              <p class="reviews__review-text"></p>
+            </li>
+            <li class="reviews__review">
+              <h3 class="reviews__review-title"></h3>
+              <b class="reviews__review-service"></b>
+              <p class="reviews__review-text"></p>
+            </li>
+            -->
+          </ul>
+
+          <div class="switches reviews__switches" aria-hidden="true">
+            <button type="button" class="switch"></button>
+            <button type="button" class="switch switch--active"></button>
+            <button type="button" class="switch"></button>
+            <button type="button" class="switch"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container centerer">
+      <div class="footer__left">
+        <p class="footer__text">BRUME interior, 2017 ©</p>
+      </div>
+
+      <div class="footer__center">
+        <div class="logo">
+          <img class="logo__image" src="" alt="">
+        </div>
+
+        <ul class="socials footer__socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#">Мы в Вконтакте</a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">Мы в <span lang="en">Instagram</span></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">Мы в <span lang="en">Facebook</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__text footer__text--designer">
+          HolodnayaDesign
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

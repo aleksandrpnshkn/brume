@@ -46,6 +46,29 @@ function htmlMinify() {
     .pipe(gulp.dest("build/"));
 }
 
+function optimizeImages() {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(plumber())
+    .pipe(changed("build/img/"))
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo(),
+      pngquant({
+        quality: "60-70"
+      }),
+      jpegRecompress({
+        quality: "high",
+        min: 60,
+        max: 90
+      })
+    ], {
+      verbose: true
+    }))
+    .pipe(gulp.dest("build/img"));
+}
+
 function serve() {
   browserSync.init({
     server: {
@@ -63,10 +86,11 @@ function observe() {
 
 gulp.task("html", series(htmlMinify));
 gulp.task("style", series(css));
-gulp.task("image", series(htmlMinify));
+gulp.task("images", series(optimizeImages));
 gulp.task("build", series(
     clean,
     copy,
-    parallel("html", "style")
+    parallel("html", "style"),
+    "images"
   ));
 gulp.task("serve", parallel(serve, observe));
