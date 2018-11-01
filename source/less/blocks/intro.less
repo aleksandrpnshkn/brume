@@ -1,10 +1,65 @@
-.intro {
-  height: 608px;
+.intro__container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  min-height: 608px;
+  padding: 0 @mobile-offset;
 
   background-color: @intro-background-color;
 }
 
-.intro__container {
-  display: table;
-  margin: auto;
+.intro__main {
+  text-align: center;
+  color: @intro-text-color;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: @Playfair-Display;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.intro__text {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.intro__socials {
+  display: none;
+}
+
+//Слайдер только на десктопе, в других случаях простой фон картинкой
+.intro__slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 320px;
+  height: 608px;
+
+  background-color: @intro-background-color;
+  background-image: url("../img/intro/mobile/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 608px;
+  background-position: center top;
+}
+
+.intro__slides-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.intro__switches {
+  display: none;
 }

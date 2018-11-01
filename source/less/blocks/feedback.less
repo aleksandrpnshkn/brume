@@ -1,0 +1,57 @@
+.feedback__container {
+  position: relative;
+
+  width: 320px;
+  padding: 80px @mobile-offset 30px;
+  min-height: 911px;
+
+  color: @feedback-text-color;
+
+  background-color: @feedback-background-color;
+
+  &--background {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 320px;
+      height: 911px;
+
+      //Поправить путь
+      background-image: url("../img/connection/mobile/background.jpg");
+      background-repeat: no-repeat;
+      background-size: 320px 911px;
+      background-position: center;
+    }
+  }
+}
+
+.feedback__question {
+  margin-bottom: 15px;
+}
+
+.feedback__text {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.feedback__form {
+  margin-bottom: 15px;
+}
+
+.feedback__note {
+  margin: 0;
+
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}

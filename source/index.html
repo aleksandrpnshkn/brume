@@ -13,14 +13,27 @@
   <header class="header page__header">
     <div class="header__container centerer">
       <div class="logo header__logo">
-        <picture class="logo__picture">
-          <img class="logo__image" src="img/logo/logo-mobile.png" alt="Логотип компании">
-        </picture>
-        <!-- <img class="logo__image" src="img/logo.svg" alt=""> -->
+        <a href="#" class="logo__link">
+          <picture class="logo__picture">
+            <img class="logo__image" src="img/logo/logo-mobile.png" alt="Логотип компании">
+          </picture>
+          <!-- <img class="logo__image" src="img/logo.svg" alt=""> -->
+        </a>
       </div>
 
       <nav class="menu header__menu">
-        <button class="menu__toggle menu__toggle--off" type="button">Меню</button>
+        <button class="menu__toggle menu__toggle--off" type="button">
+          <span class="visually-hidden">Меню</span>
+
+          <svg class="menu__icon-burger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 24">
+            <path d="M34 1.5A1.5 1.5 0 0 1 32.5 3h-31a1.5 1.5 0 0 1 0-3h31A1.5 1.5 0 0 1 34 1.5zM34 12a1.5 1.5 0 0 1-1.5 1.5h-31a1.5 1.5 0 0 1 0-3h31A1.5 1.5 0 0 1 34 12zM34 22.5a1.5 1.5 0 0 1-1.5 1.5h-31a1.5 1.5 0 0 1 0-3h31a1.5 1.5 0 0 1 1.5 1.5z"/>
+          </svg>
+
+          <svg class="menu__icon-close" display="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M505.943 6.058c-8.077-8.077-21.172-8.077-29.249 0L6.058 476.693c-8.077 8.077-8.077 21.172 0 29.249A20.612 20.612 0 0 0 20.683 512a20.614 20.614 0 0 0 14.625-6.059L505.943 35.306c8.076-8.076 8.076-21.171 0-29.248z"/>
+            <path d="M505.942 476.694L35.306 6.059c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.076-8.077 21.171 0 29.248l470.636 470.636a20.616 20.616 0 0 0 14.625 6.058 20.615 20.615 0 0 0 14.624-6.057c8.075-8.078 8.075-21.173-.001-29.25z"/>
+          </svg>
+        </button>
 
         <div class="menu__container">
           <ul class="menu__list">
@@ -43,6 +56,30 @@
               <a href="#" class="menu__link">Контакты</a>
             </li>
           </ul>
+
+          <ul class="socials menu__socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">
+                  Мы в Вконтакте
+                </span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">
+                  Мы в <span lang="en">Instagram</span>
+                </span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">
+                  Мы в <span lang="en">Facebook</span>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
 
@@ -53,7 +90,7 @@
   <main class="main">
     <h1 class="visually-hidden">Сайт дизайн-студии интерьеров «BRUME»</h1>
 
-    <section class="intro">
+    <section class="intro page__intro">
       <div class="intro__container centerer">
         <div class="intro__main">
           <h2 class="intro__title">
@@ -64,17 +101,29 @@
             Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
           </p>
 
-          <a class="btn intro__btn intro__btn--icon-arrow" href="#">Заказать дизайн</a>
+          <a class="btn btn--light intro__btn intro__btn--icon-arrow" href="#">Заказать дизайн</a>
 
           <ul class="socials intro__socials">
             <li class="socials__item">
-              <a class="socials__link" href="#">Мы в Вконтакте</a>
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">
+                  Мы в Вконтакте
+                </span>
+              </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="#">Мы в <span lang="en">Instagram</span></a>
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">
+                  Мы в <span lang="en">Instagram</span>
+                </span>
+              </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="#">Мы в <span lang="en">Facebook</span></a>
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">
+                  Мы в <span lang="en">Facebook</span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -96,7 +145,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features page__features">
       <div class="features__container centerer">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ol class="features__list">
@@ -127,52 +176,52 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio page__portfolio">
       <div class="portfolio__container centerer">
-        <h2 class="portfolio__title">Портфолио</h2>
+        <h2 class="title portfolio__title">Портфолио</h2>
 
-        <ul class="portfolio__tabs">
-          <li class="portfolio__tab portfolio__tab--all portfolio__tab--active">
-            <a href="" class="portfolio__tab-link">Все проекты</a>
+        <ul class="portfolio__filters">
+          <li class="portfolio__filter portfolio__filter--all portfolio__filter--active">
+            <a href="" class="portfolio__filter-link">Все проекты</a>
           </li>
-          <li class="portfolio__tab portfolio__tab--design">
-            <a href="" class="portfolio__tab-link">Дизайн интерьеров</a>
+          <li class="portfolio__filter portfolio__filter--design">
+            <a href="" class="portfolio__filter-link">Дизайн интерьеров</a>
           </li>
-          <li class="portfolio__tab portfolio__tab--finishing">
-            <a href="" class="portfolio__tab-link">Отделочные работы</a>
+          <li class="portfolio__filter portfolio__filter--finishing">
+            <a href="" class="portfolio__filter-link">Отделочные работы</a>
           </li>
         </ul>
 
         <ul class="portfolio__carousel">
-          <li class="portfolio__slide portfolio__slide--design">
-            <a href="" class="portfolio__slide-link">
-              <h3 class="portfolio__slide-title">Дизайн интерьера гостиной</h3>
+          <li class="portfolio__slide portfolio__slide--left-side portfolio__slide--design">
+            <h3 class="portfolio__slide-title">Дизайн интерьера гостиной</h3>
+              <a href="" class="portfolio__slide-link">
               <picture class="portfolio__slide-picture">
-                <img src="img/portfolio/mobile/slide-1.png" alt="Пример работы" class="portfolio__slide-image">
+                <img class="portfolio__image" src="img/portfolio/mobile/temp/left-side.jpg" alt="Пример работы" class="portfolio__slide-image">
+              </picture>
+            </a>
+          </li>
+          <li class="portfolio__slide portfolio__slide--active portfolio__slide--design">
+            <h3 class="portfolio__slide-title">Название работы</h3>
+            <a href="" class="portfolio__slide-link">
+              <picture class="portfolio__slide-picture">
+                <img class="portfolio__image" src="img/portfolio/mobile/living-room-interior.jpg" alt="Пример работы" class="portfolio__slide-image">
+              </picture>
+            </a>
+          </li>
+          <li class="portfolio__slide portfolio__slide--right-side portfolio__slide--design">
+            <h3 class="portfolio__slide-title">Дизайн столовой в стиле «Бохо»</h3>
+            <a href="" class="portfolio__slide-link">
+              <picture class="portfolio__slide-picture">
+                <img class="portfolio__image" src="img/portfolio/mobile/temp/right-side.jpg" alt="Пример работы" class="portfolio__slide-image">
               </picture>
             </a>
           </li>
           <li class="portfolio__slide portfolio__slide--design">
+            <h3 class="portfolio__slide-title">Лофт интерьер для отеля Hiloft</h3>
             <a href="" class="portfolio__slide-link">
-              <h3 class="portfolio__slide-title">Название работы</h3>
               <picture class="portfolio__slide-picture">
-                <img src="img/portfolio/mobile/slide-2.png" alt="Пример работы" class="portfolio__slide-image">
-              </picture>
-            </a>
-          </li>
-          <li class="portfolio__slide portfolio__slide--design">
-            <a href="" class="portfolio__slide-link">
-              <h3 class="portfolio__slide-title">Дизайн столовой в стиле «Бохо»</h3>
-              <picture class="portfolio__slide-picture">
-                <img src="img/portfolio/mobile/slide-3.png" alt="Пример работы" class="portfolio__slide-image">
-              </picture>
-            </a>
-          </li>
-          <li class="portfolio__slide portfolio__slide--design">
-            <a href="" class="portfolio__slide-link">
-              <h3 class="portfolio__slide-title">Лофт интерьер для отеля Hiloft</h3>
-              <picture class="portfolio__slide-picture">
-                <img src="img/portfolio/mobile/slide-4.png" alt="Пример работы" class="portfolio__slide-image">
+                <img class="portfolio__image" src="img/portfolio/mobile/slide-4.png" alt="Пример работы" class="portfolio__slide-image">
               </picture>
             </a>
           </li>
@@ -189,9 +238,9 @@
       </div>
     </section>
 
-    <section class="services">
+    <section class="services page__services">
       <div class="services__container centerer">
-        <h2 class="services__title">Наши услуги</h2>
+        <h2 class="title services__title">Наши услуги</h2>
 
         <!-- Ссылки добавлены на случай отключенного JS -->
         <ul class="services__tabs">
@@ -216,134 +265,148 @@
         </ul>
 
         <div class="services__item services__item--commercial services__item--active">
+          <picture class="services__item-picture">
+            <img src="img/services/mobile/commercial-object.jpg" alt="" class="services__item-image">
+          </picture>
           <h3 class="services__item-title">Дизайн коммерческих объектов</h3>
           <p class="services__item-description">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова.</p>
           <p class="services__item-count">532 проекта</p>
-          <a class="btn services__btn" href="#">Консультация</a>
+          <div class="services__btn-wrapper">
+            <a class="btn services__btn" href="#">Консультация</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="video">
+    <section class="video page__video">
       <div class="video__container centerer">
-        <h2 class="video__title">О студии дизайна интерьеров BRUME за 2 минуты</h2>
+        <!-- Во время произведения добавляется класс video__overlay--play -->
+        <div class="video__overlay">
+          <button class="video__play" type="button">
+            <span class="visually-hidden">Начать воспроизведение</span>
+          </button>
 
-        <video src=""></video>
+          <h2 class="video__title">О студии дизайна интерьеров BRUME за 2 минуты</h2>
+        </div>
+
+        <img class="video__image" src="img/video/mobile/preview.jpg" alt="">
+        <!--<video src=""></video>-->
       </div>
     </section>
 
-    <section class="stages">
+    <section class="stages page__stages">
       <div class="stages__container centerer">
-        <h2 class="stages__title">Этапы работы</h2>
+        <h2 class="title stages__title">Этапы работы</h2>
 
         <ol class="stages__list">
-          <li class="stages__stage">
-            <b class="stages__stage-number" aria-hidden="true">1</b>
-            <h3 class="stages__stage-title">Консультация</h3>
-            <p class="stages__stage-description">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
+          <li class="stages__item">
+            <b class="stages__item-number" aria-hidden="true">1</b>
+            <h3 class="stages__item-title stages__item-title--dash">Консультация</h3>
+            <p class="stages__item-description">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
           </li>
 
-          <li class="stages__stage">
-            <b class="stages__stage-number" aria-hidden="true">2</b>
-            <h3 class="stages__stage-title">Техническое задание</h3>
-            <p class="stages__stage-description">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
+          <li class="stages__item">
+            <b class="stages__item-number" aria-hidden="true">2</b>
+            <h3 class="stages__item-title stages__item-title--dash">Техническое задание</h3>
+            <p class="stages__item-description">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
           </li>
 
-          <li class="stages__stage">
-            <b class="stages__stage-number" aria-hidden="true">3</b>
-            <h3 class="stages__stage-title">Замеры и планировка</h3>
-            <p class="stages__stage-description">Фиксируем размеры стен, окон, плинтусов, дверных проемов для эффективной работы</p>
+          <li class="stages__item">
+            <b class="stages__item-number" aria-hidden="true">3</b>
+            <h3 class="stages__item-title stages__item-title--dash">Замеры и планировка</h3>
+            <p class="stages__item-description">Фиксируем размеры стен, окон, плинтусов, дверных проемов для эффективной работы</p>
           </li>
 
-          <li class="stages__stage">
-            <b class="stages__stage-number" aria-hidden="true">4</b>
-            <h3 class="stages__stage-title">Дизайн-концепция</h3>
-            <p class="stages__stage-description">Создаем концепцию на основе пожеланий клиента, его образов и ощущений. Подбираем мебель.</p>
+          <li class="stages__item">
+            <b class="stages__item-number" aria-hidden="true">4</b>
+            <h3 class="stages__item-title stages__item-title--dash">Дизайн-концепция</h3>
+            <p class="stages__item-description">Создаем концепцию на основе пожеланий клиента, его образов и ощущений. Подбираем мебель.</p>
           </li>
 
-          <li class="stages__stage">
-            <b class="stages__stage-number" aria-hidden="true">5</b>
-            <h3 class="stages__stage-title">3D Визуализация</h3>
-            <p class="stages__stage-description">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам.</p>
+          <li class="stages__item">
+            <b class="stages__item-number" aria-hidden="true">5</b>
+            <h3 class="stages__item-title stages__item-title--dash">3D Визуализация</h3>
+            <p class="stages__item-description">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам.</p>
           </li>
 
-          <li class="stages__stage">
-            <b class="stages__stage-number" aria-hidden="true">6</b>
-            <h3 class="stages__stage-title">Комплектация интерьера</h3>
-            <p class="stages__stage-description">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
+          <li class="stages__item">
+            <b class="stages__item-number" aria-hidden="true">6</b>
+            <h3 class="stages__item-title stages__item-title--dash">Комплектация интерьера</h3>
+            <p class="stages__item-description">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="connection">
-      <div class="connection__container centerer">
-        <h2 class="visually-hidden">Связь</h2>
-        <b class="connection__question">Мечтаете об интерьере от BRUME?</b>
-        <p class="connection__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+    <section class="feedback page__feedback">
+      <div class="feedback__container centerer feedback__container--background">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <b class="title title--light feedback__question">Мечтаете об интерьере от BRUME?</b>
+        <p class="feedback__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
 
-        <form class="connection__form" action="" method="POST">
+        <form class="form feedback__form" action="" method="POST">
           <!-- autocomplete:off для удобства разработчика -->
-          <label class="connection__form-label">
+          <label class="form__label">
             <span class="visually-hidden">Имя</span>
-            <input type="text" name="name" placeholder="Имя*" autocomplete="off">
+            <input class="form__input" type="text" name="name" placeholder="Имя*" autocomplete="off">
           </label>
-          <label class="connection__form-label">
+          <label class="form__label">
             <span class="visually-hidden">Телефон</span>
-            <input type="tel" name="phone" placeholder="Телефон*" autocomplete="off">
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон*" autocomplete="off">
           </label>
-          <label class="connection__form-label">
+          <label class="form__label">
             <span class="visually-hidden" lang="en">E-mail</span>
-            <input type="email" name="email" placeholder="E-mail" autocomplete="off">
+            <input class="form__input" type="email" name="email" placeholder="E-mail" autocomplete="off">
           </label>
 
-          <button class="btn connection__form-btn" type="submit">Отправить</button>
+          <button class="btn btn--light btn--round form__btn" type="submit">Отправить</button>
         </form>
 
-        <p class="connection__note">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        <p class="feedback__note">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews page__reviews">
       <div class="reviews__container centerer">
-        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+        <h2 class="title reviews__title">Отзывы наших клиентов</h2>
 
         <div class="reviews__carousel">
           <ul class="reviews__list">
-            <!--
-            <li class="reviews__review">
-              <h3 class="reviews__review-title"></h3>
-              <b class="reviews__review-service"></b>
-              <p class="reviews__review-text"></p>
+            <li class="reviews__item">
+              <h3 class="reviews__item-title"></h3>
+              <b class="reviews__item-service"></b>
+              <p class="reviews__item-text"></p>
             </li>
-            -->
-            <li class="reviews__review">
-              <h3 class="reviews__review-title">Александра Холодная</h3>
+
+            <li class="reviews__item reviews__item--active">
               <picture class="reviews__picture">
-                <img class="reviews__image" src="img/reviews/holodnaya.jpg" alt="Фото Александры Холодной">
+                <img class="reviews__image" src="img/reviews/mobile/holodnaya.jpg" alt="Фото Александры Холодной">
               </picture>
-              <b class="reviews__review-service">Услуга: интерьер детской</b>
-              <p class="reviews__review-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!</p>
+
+              <h3 class="reviews__item-title">Александра Холодная</h3>
+
+              <b class="reviews__item-service">Услуга: интерьер детской</b>
+              <p class="reviews__item-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!</p>
             </li>
-            <!--
-            <li class="reviews__review">
-              <h3 class="reviews__review-title"></h3>
-              <b class="reviews__review-service"></b>
-              <p class="reviews__review-text"></p>
+
+            <li class="reviews__item">
+              <h3 class="reviews__item-title"></h3>
+              <b class="reviews__item-service"></b>
+              <p class="reviews__item-text"></p>
             </li>
-            <li class="reviews__review">
-              <h3 class="reviews__review-title"></h3>
-              <b class="reviews__review-service"></b>
-              <p class="reviews__review-text"></p>
+
+            <li class="reviews__item">
+              <h3 class="reviews__item-title"></h3>
+              <b class="reviews__item-service"></b>
+              <p class="reviews__item-text"></p>
             </li>
-            -->
           </ul>
 
           <div class="switches reviews__switches" aria-hidden="true">
-            <button type="button" class="switch"></button>
-            <button type="button" class="switch switch--active"></button>
-            <button type="button" class="switch"></button>
-            <button type="button" class="switch"></button>
+            <button type="button" class="switches__btn switches__btn--active"></button>
+            <button type="button" class="switches__btn"></button>
+            <button type="button" class="switches__btn"></button>
+            <button type="button" class="switches__btn"></button>
           </div>
         </div>
       </div>
@@ -353,23 +416,33 @@
   <footer class="footer">
     <div class="footer__container centerer">
       <div class="footer__left">
-        <p class="footer__text">BRUME interior, 2017 ©</p>
+        <p class="footer__text footer__text--copyright">BRUME interior, 2017 ©</p>
       </div>
 
       <div class="footer__center">
-        <div class="logo">
+        <div class="logo footer__logo">
           <img class="logo__image" src="" alt="">
         </div>
 
         <ul class="socials footer__socials">
-          <li class="socials__item">
-            <a class="socials__link" href="#">Мы в Вконтакте</a>
+          <li class="socials__item footer__socials-item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">Мы в Вконтакте</span>
+            </a>
           </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">Мы в <span lang="en">Instagram</span></a>
+          <li class="socials__item footer__socials-item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">
+                Мы в <span lang="en">Instagram</span>
+              </span>
+            </a>
           </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">Мы в <span lang="en">Facebook</span></a>
+          <li class="socials__item footer__socials-item">
+            <a class="socials__link" href="#">
+              <span class="visually-hidden">
+                Мы в <span lang="en">Facebook</span>
+              </span>
+            </a>
           </li>
         </ul>
       </div>
@@ -381,5 +454,26 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var menuBtn = document.querySelector(".menu__toggle");
+    var video = document.querySelector(".video__image");
+    var videoPlay = document.querySelector(".video__play");
+    var videoOverlay = document.querySelector(".video__overlay");
+
+    menuBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      menuBtn.classList.toggle("menu__toggle--off");
+    })
+
+    videoPlay.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      videoOverlay.classList.toggle("video__overlay--play");
+    })
+
+    video.addEventListener("click", function() {
+      videoOverlay.classList.toggle("video__overlay--play");
+    })
+  </script>
 </body>
 </html>

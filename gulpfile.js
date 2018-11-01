@@ -36,7 +36,7 @@ function css() {
 }
 
 function copy() {
-  return gulp.src("source/fonts/**/*")
+  return gulp.src("source/fonts/**/*.{woff,woff2}")
     .pipe(gulp.dest("build/fonts/"));
 }
 

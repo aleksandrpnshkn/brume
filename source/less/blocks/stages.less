@@ -1,0 +1,55 @@
+.stages__title {
+  margin-bottom: 35px;
+}
+
+.stages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.stages__item {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stages__item-number {
+  display: none;
+}
+
+.stages__item-title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-weight: 600;
+  font-size: 24px;
+  color: @stages-item-title-color;
+
+  &--dash {
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+
+      width: 41px;
+      height: 1px;
+
+      background-color: @stages-dash-background-color;
+    }
+  }
+}
+
+.stages__item-description {
+  margin: 0;
+
+  line-height: 25px;
+  color: @stages-text-color;
+}

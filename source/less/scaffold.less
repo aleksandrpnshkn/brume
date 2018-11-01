@@ -1,8 +1,98 @@
-.page {
+@font-face {
+  font-family: "Playfair Display";
+  font-display: swap;
+  src: local("PlayfairDisplay-Regular"),
+       url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.woff2") format("woff2"),
+       url("../fonts/Playfair_Display/playfairdisplay-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: local("Raleway-Light"),
+       url("../fonts/Raleway/raleway-light-webfont.woff2") format("woff2"),
+       url("../fonts/Raleway/raleway-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: local("Raleway-Regular"),
+       url("../fonts/Raleway/raleway-regular-webfont.woff2") format("woff2"),
+       url("../fonts/Raleway/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: local("Raleway-Medium"),
+       url("../fonts/Raleway/raleway-medium-webfont.woff2") format("woff2"),
+       url("../fonts/Raleway/raleway-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: local("Raleway-SemiBold"),
+       url("../fonts/Raleway/raleway-semibold-webfont.woff2") format("woff2"),
+       url("../fonts/Raleway/raleway-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: local("Raleway-Bold"),
+       url("../fonts/Raleway/raleway-bold-webfont.woff2") format("woff2"),
+       url("../fonts/Raleway/raleway-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: local("Raleway-ExtraBold"),
+       url("../fonts/Raleway/raleway-extrabold-webfont.woff2") format("woff2"),
+       url("../fonts/Raleway/raleway-extrabold-webfont.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
   min-width: @mobile-width;
+  margin: 0;
+
+  font-family: @Raleway;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  outline: 1px solid green;
 }
 
 .centerer {
+  box-sizing: border-box;
   width: @mobile-centerer;
   margin: 0 auto;
 
