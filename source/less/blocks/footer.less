@@ -5,10 +5,16 @@
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  width: @mobile-width;
   padding: 95px 0 85px;
 
   background-color: @footer-background-color;
+
+  @media @tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px @tablet-offset;
+  }
 }
 
 .footer__left {
@@ -18,6 +24,11 @@
 .footer__center {
   order: -1;
   margin-bottom: 50px;
+
+  @media @tablet {
+    order: 0;
+    margin-bottom: 0;
+  }
 }
 
 .footer__logo {
@@ -27,6 +38,10 @@
   margin-bottom: 45px;
 
   background-color: greenyellow;
+
+  @media @tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .footer__socials {
@@ -41,13 +56,20 @@
   }
 }
 
-.footer__bottom {}
+.footer__right {}
 
 .footer__text {
   margin: 0;
 
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
   text-align: center;
   color: @footer-text-color;
+
+  @media @tablet {
+    font-size: 16px;
+  }
 
   &--copyright {
     margin-bottom: 5px;

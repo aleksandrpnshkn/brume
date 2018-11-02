@@ -10,7 +10,15 @@
   text-align: center;
   color: @title-color;
 
+  @media @tablet {
+    text-align: left;
+  }
+
   &--light {
     color: @title-color--light;
+  }
+
+  &--break {
+    display: block;
   }
 }

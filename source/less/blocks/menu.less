@@ -1,8 +1,6 @@
 .menu {
   position: relative;
   z-index: 0;
-
-  width: 320px;
 }
 
 .menu__toggle {
@@ -19,6 +17,14 @@
   background-color: transparent;
   cursor: pointer;
 
+  @media @tablet {
+    padding: 41px 43px;
+  }
+
+  @media @desktop {
+    padding: 10px;
+  }
+
   &--off {
     padding: 26px 14px;
 
@@ -33,6 +39,14 @@
     .menu__icon-close {
       display: none;
     }
+
+    @media @tablet {
+      padding: 61px 37px;
+    }
+
+    @media @desktop {
+      padding: 10px;
+    }
   }
 }
 
@@ -43,6 +57,16 @@
   height: 24px;
 
   fill: #ffffff;
+
+  @media @tablet {
+    width: 64px;
+    height: 44px;
+  }
+
+  @media @desktop {
+    width: 26px;
+    height: 18px;
+  }
 }
 
 .menu__icon-close {
@@ -52,6 +76,16 @@
   height: 25px;
 
   fill: #ffffff;
+
+  @media @tablet {
+    width: 42px;
+    height: 42px;
+  }
+
+  @media @tablet {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .menu__container {
@@ -63,10 +97,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: @mobile-width;
+  width: 100%;
   min-height: 609px;
 
   background-color: @menu-background-color;
+
+  @media @tablet {
+    min-height: 1112px;
+  }
 }
 
 .menu__list {
@@ -81,10 +119,21 @@
   text-transform: uppercase;
   text-align: center;
   list-style: none;
+
+  @media @tablet {
+    margin-bottom: 120px;
+
+    font-size: 35px;
+    line-height: 42px;
+  }
 }
 
 .menu__item {
   margin-bottom: 35px;
+
+  @media @tablet {
+    margin-bottom: 65px;
+  }
 
   &:last-child {
     margin-bottom: 0;

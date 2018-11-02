@@ -1,7 +1,6 @@
 .video__container {
   position: relative;
-  width: 320px;
-  height: 620px;
+  overflow: hidden;
 }
 
 .video__overlay {
@@ -13,8 +12,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 320px;
-  height: 620px;
+  width: 100%;
+  height: 100%;
 
   background-color: @video-overlay-background-color;
 
@@ -54,4 +53,18 @@
   letter-spacing: 0.025em;
   text-align: center;
   color: @video-title-color;
+
+  @media @tablet {
+    width: 480px;
+  }
+}
+
+.video__image {
+  width: 100%;
+  height: auto;
+
+  @media @tablet {
+    width: 768px;
+    height: 813px;
+  }
 }

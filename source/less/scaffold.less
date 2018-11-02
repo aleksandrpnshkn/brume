@@ -93,15 +93,28 @@ img {
 
 .centerer {
   box-sizing: border-box;
-  width: @mobile-centerer;
+  width: 100%;
+  max-width: @mobile-centerer;
   margin: 0 auto;
 
   @media @tablet {
-    width: @tablet-centerer;
+    max-width: @tablet-centerer;
   }
 
   @media @desktop {
-    width: @desktop-centerer;
+    max-width: @desktop-centerer;
+  }
+
+  &--wide {
+    max-width: @mobile-width;
+
+    @media @tablet {
+      max-width: @tablet-width;
+    }
+
+    @media @desktop {
+      max-width: @desktop-width;
+    }
   }
 }
 

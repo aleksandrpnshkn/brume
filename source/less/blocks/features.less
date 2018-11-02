@@ -3,10 +3,25 @@
   padding: 0;
 
   list-style: none;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .features__item {
   margin-bottom: 30px;
+
+  @media @tablet {
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 70px;
+  }
+
+  &:nth-child(2n) {
+    padding-top: 165px;
+  }
 }
 
 .features__item-number {
@@ -29,10 +44,15 @@
   font-weight: 600;
   font-size: 24px;
   color: @features-title-color;
+
+  &--1 {
+    padding-right: 40px;
+  }
 }
 
 .features__item-text {
   margin: 0;
 
+  letter-spacing: 0.05em;
   color: @features-text-color;
 }

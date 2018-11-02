@@ -1,5 +1,9 @@
 .stages__title {
   margin-bottom: 35px;
+
+  @media @tablet {
+    margin-bottom: 70px;
+  }
 }
 
 .stages__list {
@@ -7,18 +11,85 @@
   padding: 0;
 
   list-style: none;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .stages__item {
+  position: relative;
+
   margin-bottom: 40px;
+
+  @media @tablet {
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 85px;
+    padding-left: 77px;
+  }
 
   &:last-child {
     margin-bottom: 0;
+
+    @media @tablet {
+      margin-bottom: 85px;
+    }
   }
 }
 
 .stages__item-number {
+  position: absolute;
+  top: 0;
+  left: 27px;
+
   display: none;
+
+  @media @tablet {
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+
+    background-color: @stages-number-background-color;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      background-color: transparent;
+      border: 1px solid @stages-number-background-color;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: -8px;
+      left: -8px;
+
+      width: 36px;
+      height: 36px;
+
+      opacity: 0.7;
+    }
+
+    &::after {
+      top: -16px;
+      left: -16px;
+
+      width: 52px;
+      height: 52px;
+
+      opacity: 0.4;
+    }
+  }
 }
 
 .stages__item-title {
@@ -30,6 +101,12 @@
   font-weight: 600;
   font-size: 24px;
   color: @stages-item-title-color;
+
+  @media @tablet {
+    margin-bottom: 40px;
+
+    font-size: 22px;
+  }
 
   &--dash {
     &::after {
@@ -43,6 +120,10 @@
       height: 1px;
 
       background-color: @stages-dash-background-color;
+
+      @media @tablet {
+        bottom: -20px;
+      }
     }
   }
 }
@@ -52,4 +133,9 @@
 
   line-height: 25px;
   color: @stages-text-color;
+
+  @media @tablet {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }

@@ -5,12 +5,14 @@
 @mobile-centerer: 294px;
 @mobile-offset: (@mobile-width - @mobile-centerer) / 2;
 @tablet-centerer: 696px;
+@tablet-offset: (@tablet-width - @tablet-centerer) / 2;
 @desktop-centerer: 1162px;
 
+@mobile-only: ~"(max-width: 767px)";
 @tablet: ~"(min-width: 768px)";
 @desktop: ~"(min-width: 1360px)";
 
-@menu-link-color: #ffffff;
+@menu-link-color: fadeout(#ffffff, 7%);
 @menu-link-hover-color: #f8a25a;
 @menu-background-color: #112537;
 
@@ -43,11 +45,13 @@
 @portfolio-filter-color--active: #00203a;
 @portfolio-filter-color: #bababa;
 @portfolio-slide-title-color: #00203a;
-@portfolio-side-overlay-color: fadeout(#00203a, 12%);
+@portfolio-side-overlay-color: fadeout(#00203a, 20%);
 
 @services-tab-color: #5e5e5e;
 @services-tab-color--active: #00203a;
 @services-text-color: #5e5e5e;
+@services-item-title-color: #00203a;
+@services-item-count-color: #182c3d;
 
 @video-title-color: #ffffff;
 @video-overlay-background-color: fadeout(#182c3d, 30%);
@@ -58,6 +62,7 @@
 @stages-item-title-color: #313131;
 @stages-text-color: #5e5e5e;
 @stages-dash-background-color: #182c3d;
+@stages-number-background-color: #fde5d1;
 
 @feedback-background-color: fadeout(#00203a, 12%);
 @feedback-text-color: fadeout(#ffffff, 30%);

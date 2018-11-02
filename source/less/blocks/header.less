@@ -2,19 +2,35 @@
   position: relative;
 
   box-sizing: border-box;
+  width: 100%;
   padding-top: 27px;
-  padding-left: 3px;
+  padding-left: 16px;
+
+  @media @tablet {
+    padding-top: 61px;
+    padding-left: 36px;
+  }
 }
 
 .header__logo {
   width: 37px;
   height: 23px;
+
+  @media @tablet {
+    width: 84px;
+    height: 45px;
+  }
+
+  @media @desktop {
+    width: 62px;
+    height: 29px;
+  }
 }
 
 .header__menu {
   position: absolute;
   top: 0;
-  left: -@mobile-offset;
+  left: 0;
 }
 
 .header__phone {

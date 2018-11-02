@@ -10,8 +10,8 @@
   <title>BRUME | Дизайн интерьеров</title>
 </head>
 <body class="page">
-  <header class="header page__header">
-    <div class="header__container centerer">
+  <header class="header page__header centerer centerer--wide">
+    <div class="header__container">
       <div class="logo header__logo">
         <a href="#" class="logo__link">
           <picture class="logo__picture">
@@ -21,7 +21,7 @@
         </a>
       </div>
 
-      <nav class="menu header__menu">
+      <nav class="menu header__menu centerer centerer--wide">
         <button class="menu__toggle menu__toggle--off" type="button">
           <span class="visually-hidden">Меню</span>
 
@@ -91,7 +91,7 @@
     <h1 class="visually-hidden">Сайт дизайн-студии интерьеров «BRUME»</h1>
 
     <section class="intro page__intro">
-      <div class="intro__container centerer">
+      <div class="intro__container centerer centerer--wide">
         <div class="intro__main">
           <h2 class="intro__title">
             Дизайн интерьеров
@@ -151,14 +151,14 @@
         <ol class="features__list">
           <li class="features__item">
             <b class="features__item-number" aria-hidden="true">01</b>
-            <h3 class="features__item-title">Берем весь ремонт на себя</h3>
+            <h3 class="features__item-title features__item-title--1">Берем весь ремонт на себя</h3>
             <p class="features__item-text">Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом</p>
           </li>
 
           <li class="features__item">
             <b class="features__item-number" aria-hidden="true">02</b>
             <h3 class="features__item-title">Мы - профессионалы своего дела</h3>
-            <p class="features__item-text">Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги, а студия уже реализовала свыше 1000 дизайн-проектов</p>
+            <p class="features__item-text">Наши дизайнеры постоянно повышают квалификацию, посещают курсы и тренинги, а студия уже реализовала свыше 1000 дизайн-проектов</p>
           </li>
 
           <li class="features__item">
@@ -197,6 +197,7 @@
             <h3 class="portfolio__slide-title">Дизайн интерьера гостиной</h3>
               <a href="" class="portfolio__slide-link">
               <picture class="portfolio__slide-picture">
+
                 <img class="portfolio__image" src="img/portfolio/mobile/temp/left-side.jpg" alt="Пример работы" class="portfolio__slide-image">
               </picture>
             </a>
@@ -205,6 +206,9 @@
             <h3 class="portfolio__slide-title">Название работы</h3>
             <a href="" class="portfolio__slide-link">
               <picture class="portfolio__slide-picture">
+                <source media="(min-width: 768px)"
+                srcset="img/portfolio/tablet/living-room-interior.jpg">
+
                 <img class="portfolio__image" src="img/portfolio/mobile/living-room-interior.jpg" alt="Пример работы" class="portfolio__slide-image">
               </picture>
             </a>
@@ -239,11 +243,11 @@
     </section>
 
     <section class="services page__services">
-      <div class="services__container centerer">
-        <h2 class="title services__title">Наши услуги</h2>
+      <div class="services__container">
+        <h2 class="title services__title centerer">Наши услуги</h2>
 
-        <!-- Ссылки добавлены на случай отключенного JS -->
-        <ul class="services__tabs">
+        <!-- Ссылки на случай отключенного JS -->
+        <ul class="services__tabs centerer">
           <li class="services__tab">
             <a href="#" class="services__tab-link">Дизайн жилого помещения</a>
           </li>
@@ -265,21 +269,29 @@
         </ul>
 
         <div class="services__item services__item--commercial services__item--active">
-          <picture class="services__item-picture">
-            <img src="img/services/mobile/commercial-object.jpg" alt="" class="services__item-image">
-          </picture>
-          <h3 class="services__item-title">Дизайн коммерческих объектов</h3>
-          <p class="services__item-description">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова.</p>
-          <p class="services__item-count">532 проекта</p>
-          <div class="services__btn-wrapper">
-            <a class="btn services__btn" href="#">Консультация</a>
+          <div class="services__item-picture-wrapper centerer centerer--wide">
+            <picture class="services__item-picture">
+              <source media="(min-width: 768px)" srcset="img/services/tablet/commercial-object.jpg">
+
+              <img src="img/services/mobile/commercial-object.jpg" alt="" class="services__item-image">
+            </picture>
+          </div>
+          <div class="services__item-body centerer">
+            <header class="services__item-header">
+              <h3 class="services__item-title">Дизайн коммерческих объектов</h3>
+              <p class="services__item-count">532 проекта</p>
+            </header>
+            <p class="services__item-description">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова.</p>
+            <div class="services__btn-wrapper">
+              <a class="btn services__btn" href="#">Консультация</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="video page__video">
-      <div class="video__container centerer">
+      <div class="video__container centerer centerer--wide">
         <!-- Во время произведения добавляется класс video__overlay--play -->
         <div class="video__overlay">
           <button class="video__play" type="button">
@@ -339,9 +351,11 @@
     </section>
 
     <section class="feedback page__feedback">
-      <div class="feedback__container centerer feedback__container--background">
+      <div class="feedback__container centerer  centerer--wide feedback__container--background">
         <h2 class="visually-hidden">Обратная связь</h2>
-        <b class="title title--light feedback__question">Мечтаете об интерьере от BRUME?</b>
+        <b class="title title--light feedback__title">
+          <span class="title--break">Мечтаете</span> об интерьере от BRUME?
+        </b>
         <p class="feedback__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
 
         <form class="form feedback__form" action="" method="POST">
@@ -380,6 +394,9 @@
 
             <li class="reviews__item reviews__item--active">
               <picture class="reviews__picture">
+                <source media="(min-width: 768px)"
+                srcset="img/reviews/tablet/holodnaya.jpg">
+
                 <img class="reviews__image" src="img/reviews/mobile/holodnaya.jpg" alt="Фото Александры Холодной">
               </picture>
 
@@ -414,7 +431,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__container centerer">
+    <div class="footer__container centerer centerer--wide">
       <div class="footer__left">
         <p class="footer__text footer__text--copyright">BRUME interior, 2017 ©</p>
       </div>
@@ -447,7 +464,7 @@
         </ul>
       </div>
 
-      <div class="footer__bottom">
+      <div class="footer__rigth">
         <p class="footer__text footer__text--designer">
           HolodnayaDesign
         </p>
