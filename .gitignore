@@ -2,4 +2,6 @@ Thumbs.db
 psd/
 build/
 source/css/
+source/img/portfolio/*/temp/
+source/img/video/
 node_modules/
