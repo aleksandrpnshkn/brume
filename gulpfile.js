@@ -10,12 +10,15 @@ const less = require("gulp-less"),
       postcss = require("gulp-postcss"),
       autoprefixer = require("autoprefixer");
 
-const htmlmin = require("gulp-htmlmin");
+const htmlmin = require("gulp-htmlmin"),
+      posthtml = require("gulp-posthtml"),
+      include = require("posthtml-include");
 
 const imagemin = require("gulp-imagemin"),
       jpegRecompress = require("imagemin-jpeg-recompress"),
       pngquant = require("imagemin-pngquant"),
-      webp = require("gulp-webp");
+      webp = require("gulp-webp"),
+      svgstore = require("gulp-svgstore");
 
 const browserSync = require("browser-sync").create(),
       reload = browserSync.reload,
@@ -29,6 +32,9 @@ function css() {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(gulp.dest("source/css/"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
@@ -40,9 +46,21 @@ function copy() {
     .pipe(gulp.dest("build/fonts/"));
 }
 
-function htmlMinify() {
-  return gulp.src("source/**/*.html")
-    .pipe(htmlmin())
+function includeHtml() {
+  return gulp.src("source/*.html")
+    .pipe(plumber())
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build/"));
+}
+
+function minifyHtml() {
+  return gulp.src("build/*.html")
+    .pipe(plumber())
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build/"));
 }
 
@@ -69,6 +87,26 @@ function optimizeImages() {
     .pipe(gulp.dest("build/img"));
 }
 
+function svgSprite() {
+  return gulp.src("build/img/icons/*.svg")
+    .pipe(plumber())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/"));
+}
+
+function convertWebp() {
+  return gulp.src("build/**/*{jpg,png}")
+    .pipe(plumber())
+    .pipe(changed("build/", {extension: ".webp"}))
+    .pipe(webp({
+      quality: 90
+    }))
+    .pipe(gulp.dest("build/"));
+}
+
 function serve() {
   browserSync.init({
     server: {
@@ -84,13 +122,13 @@ function observe() {
   gulp.watch("source/**/*.html", series("html"));
 }
 
-gulp.task("html", series(htmlMinify));
+gulp.task("html", series(includeHtml, minifyHtml));
 gulp.task("style", series(css));
-gulp.task("images", series(optimizeImages));
+gulp.task("images", series(optimizeImages, convertWebp, svgSprite));
 gulp.task("build", series(
     clean,
     copy,
-    parallel("html", "style"),
-    "images"
+    "images",
+    parallel("html", "style")
   ));
 gulp.task("serve", parallel(serve, observe));
