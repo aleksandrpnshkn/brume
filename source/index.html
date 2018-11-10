@@ -15,11 +15,22 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
+  <!--
+    <svg class="socials__image" width="" height="" role="presentation">
+      <use xlink:href="#">
+    </svg>
+  -->
+
   <header class="header page__header centerer centerer--wide">
     <div class="header__container">
-      <div class="logo header__logo">
-        <a href="#" class="logo__link">
-          <img class="logo__image" src="img/logo.svg" alt="">
+      <div class="header__logo">
+        <a class="header__logo-link">
+          <svg class="header__logo-image" width="37" height="23" role="img">
+            <use xlink:href="#logo">
+          </svg>
+          <svg class="header__logo-image header__logo-image--desktop" width="37" height="23" role="img" display="none">
+            <use xlink:href="#logo-wide">
+          </svg>
         </a>
       </div>
 
@@ -27,13 +38,12 @@
         <button class="menu__toggle menu__toggle--off" type="button">
           <span class="visually-hidden">Меню</span>
 
-          <svg class="menu__icon-burger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 24">
-            <path d="M34 1.5A1.5 1.5 0 0 1 32.5 3h-31a1.5 1.5 0 0 1 0-3h31A1.5 1.5 0 0 1 34 1.5zM34 12a1.5 1.5 0 0 1-1.5 1.5h-31a1.5 1.5 0 0 1 0-3h31A1.5 1.5 0 0 1 34 12zM34 22.5a1.5 1.5 0 0 1-1.5 1.5h-31a1.5 1.5 0 0 1 0-3h31a1.5 1.5 0 0 1 1.5 1.5z"/>
+          <svg class="menu__icon menu__icon--burger" width="20" height="20">
+            <use xlink:href="#hamburger">
           </svg>
 
-          <svg class="menu__icon-close" display="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path d="M505.943 6.058c-8.077-8.077-21.172-8.077-29.249 0L6.058 476.693c-8.077 8.077-8.077 21.172 0 29.249A20.612 20.612 0 0 0 20.683 512a20.614 20.614 0 0 0 14.625-6.059L505.943 35.306c8.076-8.076 8.076-21.171 0-29.248z"/>
-            <path d="M505.942 476.694L35.306 6.059c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.076-8.077 21.171 0 29.248l470.636 470.636a20.616 20.616 0 0 0 14.625 6.058 20.615 20.615 0 0 0 14.624-6.057c8.075-8.078 8.075-21.173-.001-29.25z"/>
+          <svg class="menu__icon menu__icon--close" width="20" height="20" display="none">
+            <use xlink:href="#close">
           </svg>
         </button>
 
@@ -65,20 +75,31 @@
                 <span class="visually-hidden">
                   Мы в Вконтакте
                 </span>
+                <svg class="socials__image socials__image--vk" width="22" height="26" role="presentation">
+                  <use xlink:href="#vk">
+                </svg>
               </a>
             </li>
+
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">
                   Мы в <span lang="en">Instagram</span>
                 </span>
+                <svg class="socials__image socials__image--instagram" width="22" height="22" role="presentation">
+                  <use xlink:href="#instagram">
+                </svg>
               </a>
             </li>
+
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">
                   Мы в <span lang="en">Facebook</span>
                 </span>
+                <svg class="socials__image socials__image--fb" width="24" height="22" role="presentation">
+                  <use xlink:href="#fb">
+                </svg>
               </a>
             </li>
           </ul>
@@ -94,46 +115,81 @@
 
     <section class="intro page__intro">
       <div class="intro__container centerer centerer--wide">
-        <div class="intro__main">
-          <h2 class="intro__title">
-            Дизайн интерьеров
-          </h2>
+        <div class="intro__main-wrapper">
+          <div class="intro__main">
+            <h2 class="intro__title">
+              Дизайн интерьеров
+            </h2>
 
-          <p class="intro__text">
-            Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
-          </p>
+            <p class="intro__text">
+              Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+            </p>
 
-          <a class="btn btn--light intro__btn intro__btn--icon-arrow" href="#">Заказать дизайн</a>
+            <a class="btn btn--light intro__btn intro__btn--icon-arrow" href="#">Заказать дизайн</a>
 
-          <ul class="socials intro__socials">
-            <li class="socials__item">
-              <a class="socials__link" href="#">
-                <span class="visually-hidden">
-                  Мы в Вконтакте
-                </span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">
-                <span class="visually-hidden">
-                  Мы в <span lang="en">Instagram</span>
-                </span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#">
-                <span class="visually-hidden">
-                  Мы в <span lang="en">Facebook</span>
-                </span>
-              </a>
-            </li>
-          </ul>
+            <ul class="socials intro__socials">
+              <li class="socials__item intro__socials-item">
+                <a class="socials__link socials__link--semi-transparent" href="#">
+                  <span class="visually-hidden">
+                    Мы в Вконтакте
+                  </span>
+                  <svg class="socials__image" width="20" height="17" role="presentation">
+                    <use xlink:href="#vk">
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item intro__socials-item">
+                <a class="socials__link socials__link--semi-transparent" href="#">
+                  <span class="visually-hidden">
+                    Мы в <span lang="en">Instagram</span>
+                  </span>
+                  <svg class="socials__image" width="22" height="22" role="presentation">
+                    <use xlink:href="#instagram">
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item intro__socials-item">
+                <a class="socials__link socials__link--semi-transparent" href="#">
+                  <span class="visually-hidden">
+                    Мы в <span lang="en">Facebook</span>
+                  </span>
+                  <svg class="socials__image" width="24" height="22" role="presentation">
+                    <use xlink:href="#fb">
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="intro__slides">
           <ul class="intro__slides-list">
             <li class="intro__slide intro__slide--active">
-              <picture>
-                <img src="img/intro/mobile/slide-1.jpg" alt="Первый слайд карусельки">
+              <picture class="intro__slide-picture">
+                <img	class="intro__slide-image" src="img/intro/desktop/slide-1.jpg"
+                srcset="img/intro/desktop/slide-1.jpg 2x" alt="Первый слайд карусельки">
+              </picture>
+            </li>
+
+            <li class="intro__slide">
+              <picture class="intro__slide-picture">
+                <img	class="intro__slide-image" src="img/intro/desktop/slide-2.jpg"
+                srcset="img/intro/desktop/slide-2.jpg 2x" alt="Второй слайд карусельки">
+              </picture>
+            </li>
+
+            <li class="intro__slide">
+              <picture class="intro__slide-picture">
+                <img	class="intro__slide-image" src="img/intro/desktop/slide-3.jpg"
+                srcset="img/intro/desktop/slide-3.jpg 2x" alt="Третий слайд карусельки">
+              </picture>
+            </li>
+
+            <li class="intro__slide">
+              <picture class="intro__slide-picture">
+                <img	class="intro__slide-image" src="img/intro/desktop/slide-4.jpg"
+                srcset="img/intro/desktop/slide-4.jpg 2x" alt="Четвертый слайд карусельки">
               </picture>
             </li>
           </ul>
@@ -194,52 +250,83 @@
           </li>
         </ul>
 
-        <ul class="portfolio__carousel">
-          <li class="portfolio__slide portfolio__slide--left-side portfolio__slide--design">
-            <h3 class="portfolio__slide-title">Дизайн интерьера гостиной</h3>
+        <div class="portfolio__carousel">
+          <ul class="portfolio__slide-list">
+            <li class="portfolio__slide portfolio__slide--active portfolio__slide--design">
+              <h3 class="portfolio__slide-title">Дизайн интерьера гостиной</h3>
               <a href="" class="portfolio__slide-link">
-              <picture class="portfolio__slide-picture">
+                <picture class="portfolio__slide-picture">
+                  <source media="(min-width: 1360px)"
+                  srcset="img/portfolio/desktop/living-room-interior-2.jpg">
+                  <source media="(min-width: 768px)"
+                  srcset="img/portfolio/tablet/living-room-interior-2.jpg">
 
-                <img class="portfolio__image" src="img/portfolio/mobile/temp/left-side.jpg" alt="Пример работы" class="portfolio__slide-image">
-              </picture>
-            </a>
-          </li>
-          <li class="portfolio__slide portfolio__slide--active portfolio__slide--design">
-            <h3 class="portfolio__slide-title">Название работы</h3>
-            <a href="" class="portfolio__slide-link">
-              <picture class="portfolio__slide-picture">
-                <source media="(min-width: 768px)"
-                srcset="img/portfolio/tablet/living-room-interior.jpg">
+                  <img class="portfolio__slide-image" src="img/portfolio/mobile/living-room-interior-2.jpg" alt="Пример работы" class="portfolio__slide-image">
+                </picture>
+              </a>
+              <div class="portfolio__slide-overlay" aria-hidden="true"></div>
+            </li>
 
-                <img class="portfolio__image" src="img/portfolio/mobile/living-room-interior.jpg" alt="Пример работы" class="portfolio__slide-image">
-              </picture>
-            </a>
-          </li>
-          <li class="portfolio__slide portfolio__slide--right-side portfolio__slide--design">
-            <h3 class="portfolio__slide-title">Дизайн столовой в стиле «Бохо»</h3>
-            <a href="" class="portfolio__slide-link">
-              <picture class="portfolio__slide-picture">
-                <img class="portfolio__image" src="img/portfolio/mobile/temp/right-side.jpg" alt="Пример работы" class="portfolio__slide-image">
-              </picture>
-            </a>
-          </li>
-          <li class="portfolio__slide portfolio__slide--design">
-            <h3 class="portfolio__slide-title">Лофт интерьер для отеля Hiloft</h3>
-            <a href="" class="portfolio__slide-link">
-              <picture class="portfolio__slide-picture">
-                <img class="portfolio__image" src="img/portfolio/mobile/slide-4.png" alt="Пример работы" class="portfolio__slide-image">
-              </picture>
-            </a>
-          </li>
-        </ul>
+            <li class="portfolio__slide portfolio__slide--design">
+              <h3 class="portfolio__slide-title">Название работы</h3>
+              <a href="" class="portfolio__slide-link">
+                <picture class="portfolio__slide-picture">
+                  <source media="(min-width: 1360px)"
+                  srcset="img/portfolio/desktop/living-room-interior.jpg">
+                  <source media="(min-width: 768px)"
+                  srcset="img/portfolio/tablet/living-room-interior.jpg">
 
-        <div class="portfolio__carousel-btns">
-          <button class="portfolio__carousel-btn portfolio__carousel-btn--prev" type="button">
-            <span class="visually-hidden">Предыдущий</span>
-          </button>
-          <button class="portfolio__carousel-btn portfolio__carousel-btn--next" type="button">
-            <span class="visually-hidden">Следующий</span>
-          </button>
+                  <img class="portfolio__slide-image" src="img/portfolio/mobile/living-room-interior.jpg" alt="Пример работы" class="portfolio__slide-image">
+                </picture>
+              </a>
+              <div class="portfolio__slide-overlay" aria-hidden="true"></div>
+            </li>
+
+            <li class="portfolio__slide portfolio__slide--right-side portfolio__slide--next portfolio__slide--design">
+              <h3 class="portfolio__slide-title">Дизайн столовой в стиле «Бохо»</h3>
+              <a href="" class="portfolio__slide-link">
+                <picture class="portfolio__slide-picture">
+                  <source media="(min-width: 1360px)"
+                  srcset="img/portfolio/desktop/dining-room.jpg">
+                  <source media="(min-width: 768px)"
+                  srcset="img/portfolio/tablet/dining-room.jpg">
+
+                  <img class="portfolio__slide-image" src="img/portfolio/mobile/dining-room.jpg" alt="Пример работы" class="portfolio__slide-image">
+                </picture>
+              </a>
+              <div class="portfolio__slide-overlay" aria-hidden="true"></div>
+            </li>
+
+            <li class="portfolio__slide portfolio__slide--desktop-visible portfolio__slide--design">
+              <h3 class="portfolio__slide-title">Лофт интерьер для отеля Hiloft</h3>
+              <a href="" class="portfolio__slide-link">
+                <picture class="portfolio__slide-picture">
+                  <source media="(min-width: 1360px)"
+                  srcset="img/portfolio/desktop/loft-interior-hotel-hiloft.jpg">
+                  <source media="(min-width: 768px)"
+                  srcset="img/portfolio/tablet/loft-interior-hotel-hiloft.jpg">
+
+                  <img class="portfolio__slide-image" src="img/portfolio/mobile/loft-interior-hotel-hiloft.jpg" alt="Пример работы" class="portfolio__slide-image">
+                </picture>
+              </a>
+              <div class="portfolio__slide-overlay" aria-hidden="true"></div>
+            </li>
+          </ul>
+
+          <div class="portfolio__carousel-btns">
+            <button class="portfolio__carousel-btn portfolio__carousel-btn--prev" type="button">
+              <span class="visually-hidden">Предыдущий</span>
+              <svg class="portfolio__carousel-btn-icon portfolio__carousel-btn-icon--left" width="38" height="20" role="presentation">
+                <use xlink:href="#arrow">
+              </svg>
+            </button>
+            <button class="portfolio__carousel-btn portfolio__carousel-btn--next" type="button">
+              <span class="visually-hidden">Следующий</span>
+              <svg class="portfolio__carousel-btn-icon" width="38" height="20" role="presentation">
+                <use xlink:href="#arrow">
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -248,44 +335,50 @@
       <div class="services__container">
         <h2 class="title services__title centerer">Наши услуги</h2>
 
-        <!-- Ссылки на случай отключенного JS -->
-        <ul class="services__tabs centerer">
-          <li class="services__tab">
-            <a href="#" class="services__tab-link">Дизайн жилого помещения</a>
-          </li>
-          <li class="services__tab">
-            <a href="#" class="services__tab-link">Дизайн отельных комнат</a>
-          </li>
-          <li class="services__tab services__tab--commercial services__tab--active">
-            <a href="#" class="services__tab-link">Дизайн коммерческих объектов</a>
-          </li>
-          <li class="services__tab">
-            <a href="#" class="services__tab-link">Ремонт под ключ</a>
-          </li>
-          <li class="services__tab">
-            <a href="#" class="services__tab-link">Отделочные работы</a>
-          </li>
-          <li class="services__tab">
-            <a href="#" class="services__tab-link">Выезд дизайнера на дом</a>
-          </li>
-        </ul>
+        <div class="services__inner-container centerer centerer--wide">
+          <!-- Ссылки на случай отключенного JS -->
+          <ul class="services__tabs">
+            <li class="services__tab">
+              <a href="#" class="services__tab-link">Дизайн жилого помещения</a>
+            </li>
+            <li class="services__tab">
+              <a href="#" class="services__tab-link">Дизайн отельных комнат</a>
+            </li>
+            <li class="services__tab services__tab--commercial services__tab--active">
+              <a href="#" class="services__tab-link">Дизайн коммерческих объектов</a>
+            </li>
+            <li class="services__tab">
+              <a href="#" class="services__tab-link">Ремонт под ключ</a>
+            </li>
+            <li class="services__tab">
+              <a href="#" class="services__tab-link">Отделочные работы</a>
+            </li>
+            <li class="services__tab">
+              <a href="#" class="services__tab-link">Выезд дизайнера на дом</a>
+            </li>
+          </ul>
 
-        <div class="services__item services__item--commercial services__item--active">
-          <div class="services__item-picture-wrapper centerer centerer--wide">
-            <picture class="services__item-picture">
-              <source media="(min-width: 768px)" srcset="img/services/tablet/commercial-object.jpg">
+          <div class="services__item services__item--commercial services__item--active">
+            <div class="services__item-picture-wrapper">
+              <picture class="services__item-picture">
+                <source media="(min-width: 1360px)"
+                srcset="img/services/desktop/commercial-object.jpg">
+                <source media="(min-width: 768px)" srcset="img/services/tablet/commercial-object.jpg">
 
-              <img src="img/services/mobile/commercial-object.jpg" alt="" class="services__item-image">
-            </picture>
-          </div>
-          <div class="services__item-body centerer">
-            <header class="services__item-header">
-              <h3 class="services__item-title">Дизайн коммерческих объектов</h3>
-              <p class="services__item-count">532 проекта</p>
-            </header>
-            <p class="services__item-description">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова.</p>
-            <div class="services__btn-wrapper">
-              <a class="btn services__btn" href="#">Консультация</a>
+                <img src="img/services/mobile/commercial-object.jpg" alt="" class="services__item-image">
+              </picture>
+            </div>
+            <div class="services__item-body">
+              <header class="services__item-header">
+                <h3 class="services__item-title">Дизайн коммерческих объектов</h3>
+                <p class="services__item-count">532 проекта</p>
+              </header>
+              <div class="services__item-bottom">
+                <p class="services__item-description">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова.</p>
+                <div class="services__btn-wrapper">
+                  <a class="btn services__btn" href="#">Консультация</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -354,52 +447,55 @@
 
     <section class="feedback page__feedback">
       <div class="feedback__container centerer  centerer--wide feedback__container--background">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <b class="title title--light feedback__title">
-          <span class="title--break">Мечтаете</span> об интерьере от BRUME?
-        </b>
-        <p class="feedback__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+        <div class="feedback__inner-container">
+          <h2 class="visually-hidden">Обратная связь</h2>
+          <b class="title title--light feedback__title">
+            <span class="title--break">Мечтаете</span> об интерьере от BRUME?
+          </b>
+          <p class="feedback__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
 
-        <form class="form feedback__form" action="" method="POST">
-          <!-- autocomplete:off для удобства разработчика -->
-          <label class="form__label">
-            <span class="visually-hidden">Имя</span>
-            <input class="form__input" type="text" name="name" placeholder="Имя*" autocomplete="off">
-          </label>
-          <label class="form__label">
-            <span class="visually-hidden">Телефон</span>
-            <input class="form__input" type="tel" name="phone" placeholder="Телефон*" autocomplete="off">
-          </label>
-          <label class="form__label">
-            <span class="visually-hidden" lang="en">E-mail</span>
-            <input class="form__input" type="email" name="email" placeholder="E-mail" autocomplete="off">
-          </label>
+          <form class="form feedback__form" action="" method="POST">
+            <!-- autocomplete:off для удобства разработчика -->
+            <label class="form__label">
+              <span class="visually-hidden">Имя</span>
+              <input class="form__input" type="text" name="name" placeholder="Имя*" autocomplete="off">
+            </label>
+            <label class="form__label">
+              <span class="visually-hidden">Телефон</span>
+              <input class="form__input" type="tel" name="phone" placeholder="Телефон*" autocomplete="off">
+            </label>
+            <label class="form__label">
+              <span class="visually-hidden" lang="en">E-mail</span>
+              <input class="form__input" type="email" name="email" placeholder="E-mail" autocomplete="off">
+            </label>
 
-          <button class="btn btn--light btn--round form__btn" type="submit">Отправить</button>
-        </form>
+            <button class="btn btn--light btn--round form__btn" type="submit">Отправить</button>
+          </form>
 
-        <p class="feedback__note">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+          <p class="feedback__note">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </div>
       </div>
     </section>
 
     <section class="reviews page__reviews">
-      <div class="reviews__container centerer">
-        <h2 class="title reviews__title">Отзывы наших клиентов</h2>
+      <div class="reviews__container">
+        <h2 class="title reviews__title centerer">Отзывы наших клиентов</h2>
 
-        <div class="reviews__carousel">
+        <div class="reviews__carousel centerer">
           <ul class="reviews__list">
-            <li class="reviews__item">
-              <h3 class="reviews__item-title"></h3>
-              <b class="reviews__item-service"></b>
-              <p class="reviews__item-text"></p>
+            <li class="reviews__item reviews__item--prev">
+              <picture class="reviews__item-picture">
+                <img class="reviews__image" src="img/reviews/person-1.jpg" alt="Фото">
+              </picture>
+
+              <h3 class="reviews__item-title">Lorem impsum</h3>
+              <b class="reviews__item-service">Lorem ipsum</b>
+              <p class="reviews__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis nunc at tortor pellentesque lobortis. In lobortis, tellus eget lacinia hendrerit, dui enim ultrices metus, nec porttitor purus ligula sed quam. Cras sit amet dolor mi.</p>
             </li>
 
             <li class="reviews__item reviews__item--active">
-              <picture class="reviews__picture">
-                <source media="(min-width: 768px)"
-                srcset="img/reviews/tablet/holodnaya.jpg">
-
-                <img class="reviews__image" src="img/reviews/mobile/holodnaya.jpg" alt="Фото Александры Холодной">
+              <picture class="reviews__item-picture">
+                <img class="reviews__image" src="img/reviews/holodnaya.jpg" alt="Фото Александры Холодной">
               </picture>
 
               <h3 class="reviews__item-title">Александра Холодная</h3>
@@ -408,16 +504,24 @@
               <p class="reviews__item-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUME!</p>
             </li>
 
-            <li class="reviews__item">
-              <h3 class="reviews__item-title"></h3>
-              <b class="reviews__item-service"></b>
-              <p class="reviews__item-text"></p>
+            <li class="reviews__item reviews__item--next">
+              <picture class="reviews__item-picture">
+                <img class="reviews__image" src="img/reviews/person-3.jpg" alt="Фото">
+              </picture>
+
+              <h3 class="reviews__item-title">Lorem impsum</h3>
+              <b class="reviews__item-service">Lorem ipsum</b>
+              <p class="reviews__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis nunc at tortor pellentesque lobortis. In lobortis, tellus eget lacinia hendrerit, dui enim ultrices metus, nec porttitor purus ligula sed quam. Cras sit amet dolor mi.</p>
             </li>
 
             <li class="reviews__item">
-              <h3 class="reviews__item-title"></h3>
-              <b class="reviews__item-service"></b>
-              <p class="reviews__item-text"></p>
+              <picture class="reviews__item-picture">
+                <img class="reviews__image" src="img/reviews/person-4.jpg" alt="Фото">
+              </picture>
+
+              <h3 class="reviews__item-title">Lorem impsum</h3>
+              <b class="reviews__item-service">Lorem ipsum</b>
+              <p class="reviews__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis nunc at tortor pellentesque lobortis. In lobortis, tellus eget lacinia hendrerit, dui enim ultrices metus, nec porttitor purus ligula sed quam. Cras sit amet dolor mi.</p>
             </li>
           </ul>
 
@@ -439,14 +543,19 @@
       </div>
 
       <div class="footer__center">
-        <div class="logo footer__logo">
-          <img class="logo__image" src="" alt="">
+        <div class="footer__logo">
+          <svg class="footer__logo-image" width="70" height="40" role="presentation">
+            <use xlink:href="#logo">
+          </svg>
         </div>
 
         <ul class="socials footer__socials">
           <li class="socials__item footer__socials-item">
             <a class="socials__link" href="#">
               <span class="visually-hidden">Мы в Вконтакте</span>
+              <svg class="socials__image socials__image--vk" width="22" height="26" role="presentation">
+                <use xlink:href="#vk">
+              </svg>
             </a>
           </li>
           <li class="socials__item footer__socials-item">
@@ -454,6 +563,9 @@
               <span class="visually-hidden">
                 Мы в <span lang="en">Instagram</span>
               </span>
+              <svg class="socials__image socials__image--instagram" width="22" height="22" role="presentation">
+                <use xlink:href="#instagram">
+              </svg>
             </a>
           </li>
           <li class="socials__item footer__socials-item">
@@ -461,6 +573,9 @@
               <span class="visually-hidden">
                 Мы в <span lang="en">Facebook</span>
               </span>
+              <svg class="socials__image socials__image--fb" width="24" height="22" role="presentation">
+                <use xlink:href="#fb">
+              </svg>
             </a>
           </li>
         </ul>
@@ -474,25 +589,6 @@
     </div>
   </footer>
 
-  <script>
-    var menuBtn = document.querySelector(".menu__toggle");
-    var video = document.querySelector(".video__image");
-    var videoPlay = document.querySelector(".video__play");
-    var videoOverlay = document.querySelector(".video__overlay");
-
-    menuBtn.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      menuBtn.classList.toggle("menu__toggle--off");
-    })
-
-    videoPlay.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      videoOverlay.classList.toggle("video__overlay--play");
-    })
-
-    video.addEventListener("click", function() {
-      videoOverlay.classList.toggle("video__overlay--play");
-    })
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>

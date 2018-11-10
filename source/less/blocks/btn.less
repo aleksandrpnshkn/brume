@@ -16,10 +16,17 @@
   border: 1px solid @btn-border-color;
   cursor: pointer;
 
-  @media @tablet {
-    padding: 40px 60px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.3s;
 
-    font-size: 30px;
+  @media @tablet {
+    padding: 20px 30px;
+
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    font-size: 15px;
   }
 
   &:hover,

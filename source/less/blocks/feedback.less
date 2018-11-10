@@ -1,17 +1,7 @@
 .feedback__container {
   position: relative;
 
-  padding: 80px @mobile-offset 30px;
-  min-height: 911px;
-
   color: @feedback-text-color;
-
-  background-color: @feedback-background-color;
-
-  @media @tablet {
-    padding: 75px 140px 40px;
-    min-height: 778px;
-  }
 
   &--background {
     &::before {
@@ -26,16 +16,47 @@
       height: 100%;
 
       //Поправить путь
-      background-image: url("../img/connection/mobile/background.jpg");
+      background-image: url("../img/feedback/mobile/background.jpg");
       background-repeat: no-repeat;
       background-size: 320px 911px;
       background-position: center top;
 
       @media @tablet {
-        background-image: url("../img/connection/tablet/background.jpg");
+        background-image: url("../img/feedback/tablet/background.jpg");
         background-size: 768px 778px;
       }
+
+      @media @desktop {
+        left: 50%;
+
+        width: 50%;
+
+        background-image: url("../img/feedback/desktop/background.jpg");
+        background-size: 683px 683px;
+      }
     }
+  }
+}
+
+.feedback__inner-container {
+  box-sizing: border-box;
+  min-height: 911px;
+  padding: 80px @mobile-offset 30px;
+
+  background-color: @feedback-background-color;
+
+  @media @tablet {
+    min-height: 778px;
+    padding: 75px 140px 40px;
+  }
+
+  @media @desktop {
+    width: 50%;
+    min-height: 683px;
+    padding-right: 95px;
+    padding-left: 105px;
+
+    background-color: @feedback-background-color--desktop;
   }
 }
 
@@ -49,6 +70,14 @@
 
     text-align: center;
   }
+
+  @media @desktop {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    text-align: left;
+  }
 }
 
 .feedback__text {
@@ -61,7 +90,14 @@
   text-align: center;
 
   @media @tablet {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  @media @desktop {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    text-align: left;
   }
 }
 
@@ -78,5 +114,10 @@
 
   @media @tablet {
     font-size: 18px;
+  }
+
+  @media @desktop {
+    font-size: 14px;
+    text-align: left;
   }
 }

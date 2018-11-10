@@ -2,6 +2,25 @@
   position: relative;
 
   background-color: #fdfaf3;
+
+  &::before {
+    // Вертикальные полосы на странице
+    @media @desktop {
+
+      content: "";
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+
+      width: @desktop-centerer;
+
+      background: linear-gradient(to right, @page-stripe-color, @page-stripe-color 1px, transparent 1px, transparent 290px, @page-stripe-color 290px, @page-stripe-color 291px, transparent 291px, transparent 580px, @page-stripe-color 580px, @page-stripe-color 581px, transparent 581px, transparent 870px, @page-stripe-color 870px, @page-stripe-color 871px, transparent 871px, transparent 1159px, @page-stripe-color 1159px);
+    }
+  }
 }
 
 .page__header {
@@ -18,6 +37,10 @@
   @media @tablet {
     margin-bottom: 95px;
   }
+
+  @media @desktop {
+    margin-bottom: 125px;
+  }
 }
 
 .page__features {
@@ -25,6 +48,10 @@
 
   @media @tablet {
     margin-bottom: 160px;
+  }
+
+  @media @desktop {
+    margin-bottom: 115px;
   }
 }
 
@@ -34,6 +61,10 @@
   @media @tablet {
     margin-bottom: 175px;
   }
+
+  @media @desktop {
+    margin-bottom: 135px;
+  }
 }
 
 .page__services {
@@ -41,6 +72,10 @@
 
   @media @tablet {
     margin-bottom: 200px;
+  }
+
+  @media @desktop {
+    margin-bottom: 135px;
   }
 }
 
@@ -50,6 +85,10 @@
   @media @tablet {
     margin-bottom: 185px;
   }
+
+  @media @desktop {
+    margin-bottom: 135px;
+  }
 }
 
 .page__stages {
@@ -57,6 +96,10 @@
 
   @media @tablet {
     margin-bottom: 155px;
+  }
+
+  @media @desktop {
+    margin-bottom: 80px;
   }
 }
 
@@ -66,12 +109,20 @@
   @media @tablet {
     margin-bottom: 190px;
   }
+
+  @media @desktop {
+    margin-bottom: 150px;
+  }
 }
 
 .page__reviews {
   margin-bottom: 200px;
 
   @media @tablet {
-    margin-bottom: 100px;
+    margin-bottom: 225px;
+  }
+
+  @media @desktop {
+    margin-bottom: 245px;
   }
 }

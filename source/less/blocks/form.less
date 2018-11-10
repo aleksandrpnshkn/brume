@@ -2,6 +2,10 @@
   display: block;
   margin-bottom: 45px;
 
+  @media @desktop {
+    margin-bottom: 25px;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -22,12 +26,22 @@
   border: none;
   border-bottom: 2px solid @form-border-color;
 
+  @media @desktop {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   &::placeholder {
     font-family: @Raleway;
     font-weight: 300;
     font-size: 18px;
     letter-spacing: 0.05em;
     color: @form-placeholder-color;
+
+    @media @desktop {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &:hover,
@@ -46,5 +60,7 @@
   padding-top: 24px;
   padding-bottom: 24px;
 
-  font-size: 18px;
+  @media @desktop {
+    margin-top: 45px;
+  }
 }

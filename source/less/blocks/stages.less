@@ -14,6 +14,7 @@
 
   @media @tablet {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -30,11 +31,20 @@
     padding-left: 77px;
   }
 
+  @media @desktop {
+    width: 33%;
+    margin-bottom: 60px;
+  }
+
   &:last-child {
     margin-bottom: 0;
 
     @media @tablet {
       margin-bottom: 85px;
+    }
+
+    @media @desktop {
+      margin-bottom: 60px;
     }
   }
 }
@@ -108,6 +118,10 @@
     font-size: 22px;
   }
 
+  @media @desktop {
+    margin-bottom: 30px;
+  }
+
   &--dash {
     &::after {
       content: "";
@@ -123,6 +137,10 @@
 
       @media @tablet {
         bottom: -20px;
+      }
+
+      @media @desktop {
+        bottom: -15px;
       }
     }
   }

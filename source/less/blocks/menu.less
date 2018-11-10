@@ -11,17 +11,21 @@
 
   display: inline-block;
   margin: 0;
-  padding: 21px 17px;
+  padding: 26px 14px;
 
   border: none;
   background-color: transparent;
   cursor: pointer;
 
   @media @tablet {
-    padding: 41px 43px;
+    padding: 61px 37px;
   }
 
   @media @desktop {
+    top: -72px;
+    right: auto;
+    left: @desktop-offset;
+
     padding: 10px;
   }
 
@@ -32,11 +36,11 @@
       display: none;
     }
 
-    .menu__icon-burger {
+    .menu__icon--burger {
       display: block;
     }
 
-    .menu__icon-close {
+    .menu__icon--close {
       display: none;
     }
 
@@ -50,41 +54,32 @@
   }
 }
 
-.menu__icon-burger {
-  display: none;
-
-  width: 34px;
-  height: 24px;
-
-  fill: #ffffff;
-
-  @media @tablet {
-    width: 64px;
-    height: 44px;
-  }
-
-  @media @desktop {
-    width: 26px;
-    height: 18px;
-  }
-}
-
-.menu__icon-close {
+.menu__icon {
   display: block;
 
   width: 25px;
   height: 25px;
 
-  fill: #ffffff;
+  fill: @menu-icon-color;
 
   @media @tablet {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
   }
 
-  @media @tablet {
+  @media @desktop {
     width: 26px;
     height: 26px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: @menu-icon-color--active;
+  }
+
+  &--burger {
+    display: none;
   }
 }
 
@@ -103,7 +98,14 @@
   background-color: @menu-background-color;
 
   @media @tablet {
-    min-height: 1112px;
+    min-height: 880px;
+  }
+
+  @media @desktop {
+    right: @desktop-offset;
+
+    width: @desktop-width - @desktop-offset * 2;
+    min-height: 595px;
   }
 }
 
@@ -121,10 +123,15 @@
   list-style: none;
 
   @media @tablet {
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 
-    font-size: 35px;
-    line-height: 42px;
+    font-size: 28px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+
+    font-size: 20px;
   }
 }
 
@@ -132,7 +139,11 @@
   margin-bottom: 35px;
 
   @media @tablet {
-    margin-bottom: 65px;
+    margin-bottom: 45px;
+  }
+
+  @media @desktop {
+    margin-bottom: 35px;
   }
 
   &:last-child {
@@ -150,5 +161,7 @@
 }
 
 .menu__socials {
-
+  @media @desktop {
+    display: none;
+  }
 }

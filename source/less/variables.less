@@ -6,15 +6,26 @@
 @mobile-offset: (@mobile-width - @mobile-centerer) / 2;
 @tablet-centerer: 696px;
 @tablet-offset: (@tablet-width - @tablet-centerer) / 2;
-@desktop-centerer: 1162px;
+@desktop-centerer: 1160px;
+@desktop-offset: (@desktop-width - @desktop-centerer) / 2;
+
+@portfolio-image-width--mobile: 260px;
+@portfolio-image-height--mobile: 529px;
+@portfolio-image-width--tablet: 604px;
+@portfolio-image-height--tablet: 612px;
+@portfolio-image-width--desktop: 392px;
+@portfolio-image-height--desktop: 552px;
 
 @mobile-only: ~"(max-width: 767px)";
 @tablet: ~"(min-width: 768px)";
+@tablet-only: ~"(max-width: 1359px)";
 @desktop: ~"(min-width: 1360px)";
 
 @menu-link-color: fadeout(#ffffff, 7%);
 @menu-link-hover-color: #f8a25a;
 @menu-background-color: #112537;
+@menu-icon-color: #ffffff;
+@menu-icon-color--active: #f8a25a;
 
 @btn-border-color: #112537;
 @btn-text-color: #00203a;
@@ -26,6 +37,9 @@
 @title-color: #00203a;
 @title-color--light: #ffffff;
 
+@socials-icon-color: #ffffff;
+@socials-icon-color--active: #f8a25a;
+
 @form-border-color: #bdb1a7;
 @form-border-color--active: #f8a25a;
 @form-input-color: #ffffff;
@@ -36,6 +50,7 @@
 @switches-btn-color--active: #1a444a;
 
 @intro-background-color: fadeout(#112537, 12%);
+@intro-background-color--desktop: fadeout(#112537, 3%);
 @intro-text-color: #ffffff;
 
 @features-number-color: fadeout(#fea052, 74%);
@@ -45,7 +60,12 @@
 @portfolio-filter-color--active: #00203a;
 @portfolio-filter-color: #bababa;
 @portfolio-slide-title-color: #00203a;
-@portfolio-side-overlay-color: fadeout(#00203a, 20%);
+@portfolio-slide-title-color--desktop: #ffffff;
+@portfolio-slide-overlay-color: fadeout(#00203a, 20%);
+@portfolio-underline-color: #00203a;
+@portfolio-plus-background-color: #fcbd83;
+@portfolio-arrow-color: fadeout(#ffffff, 30%);
+@portfolio-arrow-color--active: #ffffff;
 
 @services-tab-color: #5e5e5e;
 @services-tab-color--active: #00203a;
@@ -65,17 +85,21 @@
 @stages-number-background-color: #fde5d1;
 
 @feedback-background-color: fadeout(#00203a, 12%);
+@feedback-background-color--desktop: #182c3d;
 @feedback-text-color: fadeout(#ffffff, 30%);
 
 @reviews-item-background-color: #ffffff;
 @reviews-item-title-color: #313131;
 @reviews-item-service-color: #efb172;
 @reviews-text-color: #5e5e5e;
+@reviews-picture-overlay-background-color: fadeout(#182c3d, 22%);
 
 @footer-background-color: #182c3d;
 @footer-text-color: #ffc487;
+@footer-logo-color: #ffffff;
 
 @page-background-color: #fdfaf3;
+@page-stripe-color: #f1efe9;
 
 //Стандартный: Raleway Light 18px 1.5
 @Playfair-Display: "Playfair Display", "Times New Roman", Times, serif;

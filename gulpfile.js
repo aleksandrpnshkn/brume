@@ -14,6 +14,8 @@ const htmlmin = require("gulp-htmlmin"),
       posthtml = require("gulp-posthtml"),
       include = require("posthtml-include");
 
+const uglify = require("gulp-uglify");
+
 const imagemin = require("gulp-imagemin"),
       jpegRecompress = require("imagemin-jpeg-recompress"),
       pngquant = require("imagemin-pngquant"),
@@ -44,6 +46,13 @@ function css() {
 function copy() {
   return gulp.src("source/fonts/**/*.{woff,woff2}")
     .pipe(gulp.dest("build/fonts/"));
+}
+
+function uglifyJs() {
+  return gulp.src("source/js/**/*.js")
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js/"));
 }
 
 function includeHtml() {
@@ -88,7 +97,7 @@ function optimizeImages() {
 }
 
 function svgSprite() {
-  return gulp.src("build/img/icons/*.svg")
+  return gulp.src(["build/img/icons/*.svg", "build/img/logo/*.svg"])
     .pipe(plumber())
     .pipe(svgstore({
       inlineSvg: true
@@ -120,14 +129,17 @@ function serve() {
 function observe() {
   gulp.watch("source/less/**/*.less", series("style"));
   gulp.watch("source/**/*.html", series("html"));
+  gulp.watch("source/js/**/*.js", series("js"));
 }
 
 gulp.task("html", series(includeHtml, minifyHtml));
 gulp.task("style", series(css));
 gulp.task("images", series(optimizeImages, convertWebp, svgSprite));
+gulp.task("js", series(uglifyJs));
 gulp.task("build", series(
     clean,
     copy,
+    "js",
     "images",
     parallel("html", "style")
   ));

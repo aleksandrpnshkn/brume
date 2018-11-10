@@ -16,11 +16,23 @@
   @media @tablet {
     box-sizing: border-box;
     width: 50%;
+    margin-bottom: 0;
     padding-right: 70px;
   }
 
+  @media @desktop {
+    width: 25%;
+    padding-right: 25px;
+  }
+
   &:nth-child(2n) {
-    padding-top: 165px;
+    @media @tablet {
+      padding-top: 165px;
+    }
+
+    @media @desktop {
+      padding-top: 210px;
+    }
   }
 }
 
@@ -45,6 +57,12 @@
   font-size: 24px;
   color: @features-title-color;
 
+  @media @desktop {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+  }
+
   &--1 {
     padding-right: 40px;
   }
@@ -55,4 +73,8 @@
 
   letter-spacing: 0.05em;
   color: @features-text-color;
+
+  @media @desktop {
+    font-size: 16px;
+  }
 }
