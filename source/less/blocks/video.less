@@ -36,6 +36,16 @@
   transition-property: background-color;
   transition-duration: 0.3s;
 
+  @media @tablet {
+    width: 128px;
+    height: 128px;
+  }
+
+  @media @desktop {
+    width: 84px;
+    height: 84px;
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -55,7 +65,7 @@
   color: @video-title-color;
 
   @media @tablet {
-    width: 480px;
+    width: 460px;
   }
 
   @media @desktop {

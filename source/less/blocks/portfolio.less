@@ -8,10 +8,14 @@
 }
 
 .portfolio__title {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+
+  @media @tablet {
+    margin-bottom: 32px;
+  }
 
   @media @desktop {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 }
 
@@ -35,13 +39,14 @@
 
   @media @desktop {
     justify-content: flex-start;
+    margin-bottom: 60px;
 
     font-size: 18px;
   }
 }
 
 .portfolio__filter {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @media @tablet {
     margin-right: 15px;
@@ -150,6 +155,9 @@
     display: block;
     width: (@desktop-centerer - @portfolio-image-width--desktop) / 3;
     margin-right: 0;
+
+    transition-property: width;
+    transition-duration: 2s;
   }
 
   &--active {
@@ -210,7 +218,6 @@
 .portfolio__slide-title {
   display: none;
   margin: 0;
-  padding: 0 5px;
   order: 1;
 
   font-weight: 600;
@@ -319,6 +326,9 @@
     height: 100%;
 
     cursor: pointer;
+
+    transition-property: width;
+    transition-duration: 2s;
   }
 
   &::before {

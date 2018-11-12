@@ -1,9 +1,13 @@
 .form__label {
   display: block;
-  margin-bottom: 45px;
+  margin-bottom: 47px;
+
+  @media @tablet {
+    margin-bottom: 37px;
+  }
 
   @media @desktop {
-    margin-bottom: 25px;
+    margin-bottom: 32px;
   }
 
   &:last-of-type {
@@ -60,7 +64,13 @@
   padding-top: 24px;
   padding-bottom: 24px;
 
+  font-size: 18px;
+
   @media @desktop {
-    margin-top: 45px;
+    margin-top: 48px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    font-size: 15px;
   }
 }

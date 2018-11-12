@@ -1,7 +1,11 @@
 .stages__title {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 
   @media @tablet {
+    margin-bottom: 60px;
+  }
+
+  @media @desktop {
     margin-bottom: 70px;
   }
 }
@@ -22,18 +26,18 @@
 .stages__item {
   position: relative;
 
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   @media @tablet {
     box-sizing: border-box;
     width: 50%;
-    margin-bottom: 85px;
+    margin-bottom: 65px;
     padding-left: 77px;
   }
 
   @media @desktop {
     width: 33%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   &:last-child {
@@ -50,13 +54,13 @@
 }
 
 .stages__item-number {
-  position: absolute;
-  top: 0;
-  left: 27px;
-
   display: none;
 
   @media @tablet {
+    position: absolute;
+    top: 0;
+    left: 25px;
+
     display: block;
 
     width: 22px;
@@ -113,7 +117,7 @@
   color: @stages-item-title-color;
 
   @media @tablet {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     font-size: 22px;
   }
@@ -127,7 +131,7 @@
       content: "";
 
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 0;
 
       width: 41px;
@@ -136,7 +140,7 @@
       background-color: @stages-dash-background-color;
 
       @media @tablet {
-        bottom: -20px;
+        bottom: -13px;
       }
 
       @media @desktop {

@@ -36,7 +36,7 @@
 
   @media @tablet {
     margin-top: 0;
-    left: -@tablet-width*2;
+    left: -@tablet-width;
     padding-right: 50px;
   }
 
@@ -72,6 +72,8 @@
   @media @desktop {
     margin-left: floor((@desktop-width - 652px) / 2 - 70px);
     margin-right: ceil((@desktop-width - 652px) / 2 + 70px);
+    padding-top: 45px;
+    padding-left: 75px;
   }
 
   &--active {
@@ -130,7 +132,7 @@
 
 .reviews__item-picture {
   position: relative;
-  top: -40px;
+  top: -50px;
 
   display: block;
   width: 192px;
@@ -150,6 +152,7 @@
 
 .reviews__item-title {
   margin: 0;
+  margin-top: -10px;
 
   font-weight: 600;
   font-size: 24px;
@@ -157,6 +160,7 @@
   color: @reviews-item-title-color;
 
   @media @tablet {
+    margin-top: 0;
     margin-bottom: 5px;
 
     font-size: 22px;

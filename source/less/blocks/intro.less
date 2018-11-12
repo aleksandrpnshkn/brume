@@ -1,5 +1,6 @@
 .intro__container {
   position: relative;
+  z-index: 0;
 }
 
 .intro__main-wrapper {
@@ -41,6 +42,7 @@
   }
 
   @media @desktop {
+    padding-top: 15px;
     padding-left: 193px;
     padding-right: 112px;
 
@@ -67,7 +69,7 @@
   }
 
   @media @desktop {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     font-size: 60px;
   }
@@ -86,12 +88,30 @@
   }
 }
 
+.intro__btn {
+  &--icon-arrow {
+    &::after {
+      content: "";
+
+      display: inline-block;
+      width: 40px;
+      height: 10px;
+      margin-left: 20px;
+
+      background-image: url("../img/icons/intro-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 40px 10px;
+    }
+  }
+}
+
 .intro__socials {
   display: none;
 
   @media @desktop {
     position: absolute;
-    bottom: 20px;
+    bottom: 23px;
     left: @desktop-offset;
 
     display: flex;
@@ -100,7 +120,7 @@
 
 .intro__socials-item {
   @media @desktop {
-    margin-right: 35px;
+    margin-right: 15px;
   }
 }
 
@@ -164,4 +184,15 @@
 
 .intro__switches {
   display: none;
+
+  @media @desktop {
+    position: absolute;
+    right: -6px;
+    bottom: -55px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+  }
 }

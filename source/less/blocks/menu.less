@@ -22,9 +22,9 @@
   }
 
   @media @desktop {
-    top: -72px;
+    top: -68px;
     right: auto;
-    left: @desktop-offset;
+    left: @desktop-offset - 10px;
 
     padding: 10px;
   }
@@ -68,8 +68,8 @@
   }
 
   @media @desktop {
-    width: 26px;
-    height: 26px;
+    width: 23px;
+    height: 23px;
   }
 
   &:hover,
@@ -89,11 +89,13 @@
   right: 0;
 
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 609px;
+  padding-top: 45px;
 
   background-color: @menu-background-color;
 
@@ -111,7 +113,7 @@
 
 .menu__list {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
   padding: 0;
 
   font-family: @Raleway;
@@ -136,7 +138,7 @@
 }
 
 .menu__item {
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   @media @tablet {
     margin-bottom: 45px;

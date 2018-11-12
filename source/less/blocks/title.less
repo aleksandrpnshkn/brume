@@ -19,7 +19,9 @@
   }
 
   &--break {
-    display: block;
+    @media @tablet {
+      display: block;
+    }
 
     @media @desktop {
       display: inline;
