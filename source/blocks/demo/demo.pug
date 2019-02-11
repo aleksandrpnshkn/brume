@@ -1,0 +1,27 @@
+section.page__demo.demo
+  .demo__container.centerer.centerer--wide
+
+    .demo__video.video
+      - var path = 'blocks/demo/vid/Renovation';
+
+      //Видео для примера, пусть и не подходит
+      video.video__video(width="1360" height="595" preload="metadata" controls)
+        source(src=`${path}.mp4` type="video/mp4")
+        source(src=`${path}.ogv` type="video/ogg")
+        source(src=`${path}.webm` type="video/webm")
+        = "Your browser doesn't support HTML5 video tag."
+
+
+      .video__controls.hidden
+        button.video__btn.video__btn--play(type="button")
+          span.visually-hidden Начать воспроизведение
+          +svg({
+            name: 'play',
+            className: 'video__play',
+            size: [20, 20]
+          })
+
+        h2.video__title О студии дизайна интерьеров BRUME за 2 минуты
+
+      .video__overlay.hidden
+

@@ -1,0 +1,24 @@
+include mixins
+
+doctype html
+html(lang='ru')
+  include head
+
+  body.page
+    include blocks/header/header
+
+    main.main
+      h1.visually-hidden Сайт дизайн-студии интерьеров «BRUME»
+
+      include blocks/intro/intro
+      include blocks/features/features
+      include blocks/portfolio/portfolio
+      include blocks/services/services
+      include blocks/demo/demo
+      include blocks/stages/stages
+      include blocks/feedback/feedback
+      include blocks/reviews/reviews
+
+    include blocks/footer/footer
+
+    script(src="js/script.min.js")

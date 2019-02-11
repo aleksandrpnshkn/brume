@@ -1,0 +1,26 @@
+.switches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.switches__btn {
+  box-sizing: content-box;
+  display: block;
+  width: 26px;
+  height: 3px;
+  padding: 0;
+
+  background-color: @switches-btn-clr;
+  background-clip: padding-box;
+  border: 6px solid transparent;
+  cursor: pointer;
+
+  &--active,
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @switches-btn-clr--active;
+  }
+}

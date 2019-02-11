@@ -1,0 +1,197 @@
+.intro__container {
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+}
+
+.intro__main-wrapper {
+  position: relative;
+
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  min-height: 608px;
+  padding: 0 @mobile-offset;
+
+  background-color: @intro-bg;
+
+  @media @tablet {
+    min-height: 880px;
+    padding: 0 @tablet-offset;
+  }
+
+  @media @desktop {
+    width: 50%;
+    min-height: 770px;
+    padding: 0;
+
+    background-color: @intro-bg--desktop;
+  }
+}
+
+.intro__main {
+  text-align: center;
+  color: @intro-text-clr;
+
+  @media @tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  @media @desktop {
+    padding-top: 15px;
+    padding-left: 193px;
+    padding-right: 112px;
+
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: @Playfair-Display;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+
+  @media @tablet {
+    margin-bottom: 45px;
+
+    font-size: 75px;
+    letter-spacing: 0.025em;
+  }
+
+  @media @desktop {
+    margin-bottom: 20px;
+
+    font-size: 60px;
+  }
+}
+
+.intro__text {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media @tablet {
+    margin-bottom: 60px;
+  }
+
+  @media @desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.intro__btn {
+  &--icon-arrow {
+    &::after {
+      content: "";
+
+      display: inline-block;
+      width: 40px;
+      height: 10px;
+      margin-left: 20px;
+
+      background-image: url("../img/icons/intro-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 40px 10px;
+    }
+  }
+}
+
+.intro__socials {
+  display: none;
+
+  @media @desktop {
+    position: absolute;
+    bottom: 23px;
+    left: @desktop-offset;
+
+    display: flex;
+  }
+}
+
+.intro__socials-item {
+  @media @desktop {
+    margin-right: 15px;
+  }
+}
+
+.intro__socials-link {
+  @media @desktop {
+    opacity: 0.67;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @media @desktop {
+      opacity: 1;
+    }
+  }
+}
+
+//Визуально слайдер только на десктопе
+.intro__carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: @intro-slide-size-w;
+  max-width: 320px;
+
+  @media @tablet {
+    width: @intro-slide-size-w--tablet;
+    max-width: 100%;
+  }
+
+  @media @desktop {
+    top: 84px;
+    left: @desktop-offset;
+
+    width: @intro-slide-size-w--desktop;
+  }
+}
+
+.intro__carousel-container {
+  @media @desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.intro__slide-img {
+  width: @intro-slide-size-w;
+  height: @intro-slide-size-h;
+
+  @media @tablet {
+    width: @intro-slide-size-w--tablet;
+    height: @intro-slide-size-h--tablet;
+  }
+
+  @media @desktop {
+    width: @intro-slide-size-w--desktop;
+    height: @intro-slide-size-h--desktop;
+  }
+}
+
+//Поведение слайдера не меняется, просто кнопки только
+//на десктопе
+.intro__switches {
+  display: none;
+
+  @media @desktop {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

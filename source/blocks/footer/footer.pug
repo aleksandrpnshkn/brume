@@ -1,0 +1,38 @@
+footer.footer
+  .footer__container.centerer.centerer--wide
+    .footer__left
+      p.footer__text.footer__text--copyright BRUME interior, 2017 ©
+
+    .footer__center
+      .footer__logo.logo
+        +svg({
+          name: 'logo-b',
+          className: 'footer__logo-b logo__b',
+          size: [35, 40]
+        })
+        +svg({
+          name: 'logo-r',
+          className: 'footer__logo-r logo__r',
+          size: [35, 40]
+        })
+
+      ul.socials.footer__socials
+        -
+          var text = ['Вконтакте', 'Instagram', 'Facebook'];
+
+          var className = 'footer__socials-image socials__image';
+          var size = [22, 22];
+          var socials = [
+            { className, size, name: 'vk' },
+            { className, size, name: 'instagram' },
+            { className, size, name: 'fb' }
+          ];
+
+        each item, idx in socials
+          li.footer__socials-item.socials__item
+            a.socials__link(href="#")
+              span.visually-hidden Мы в #{ text[idx] }
+              +svg( item )
+
+    .footer__right
+      p.footer__text.footer__text--designer HolodnayaDesign

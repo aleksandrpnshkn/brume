@@ -1,0 +1,57 @@
+section.intro.page__intro
+  .intro__container.centerer.centerer--wide
+    .intro__main-wrapper
+      .intro__main
+        h2.intro__title Дизайн интерьеров
+        p.intro__text Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+        a.btn.btn--light.intro__btn.intro__btn--icon-arrow(href='#') Заказать дизайн
+
+        ul.intro__socials.socials.socials--semi-transparent
+          -
+            var text = ['Вконтакте', 'Instagram', 'Facebook'];
+
+            var className = 'socials__image';
+            var size = [22, 22];
+            var socials = [
+              { className, size, name: 'vk' },
+              { className, size, name: 'instagram' },
+              { className, size, name: 'fb' }
+            ];
+
+          each item, idx in socials
+            li.socials__item.intro__socials-item
+              a.intro__socials-link.socials__link(href='#')
+                span.visually-hidden Мы в #{ text[idx] }
+                +svg( item )
+
+    .carousel.intro__carousel
+      ul.carousel__container.intro__carousel-container
+        //-
+          Только один слайд со всеми разрешениями(через миксин).
+          Остальные только на десктопе
+
+        each slide, i in intro
+          - var {name, alt} = slide;
+          - var path = 'blocks/intro/img/desktop/';
+
+          if (i === 0)
+            li.carousel__item
+              +picture({
+                name, alt,
+                folder: 'intro',
+                imgClass: 'intro__slide-img'
+              })
+
+          else
+            li.carousel__item
+              picture
+                source(type="image/webp"
+                  srcset=`${path}${name}.webp,
+                          ${path}${name}@2x.webp 2x`)
+                img.intro__slide-img(alt=`${alt}`
+                  src=`${path}${name}.jpg`
+                  srcset=`${path}${name}@2x.jpg 2x`)
+
+      .switches.intro__switches.hidden(aria-hidden='true')
+        each slide in intro
+          button.intro__switch.switches__btn(type='button')

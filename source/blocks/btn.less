@@ -1,0 +1,48 @@
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 217px;
+  padding: 17px 20px;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: @btn-text-clr;
+
+  background-color: transparent;
+  border: 1px solid @btn-border-clr;
+  cursor: pointer;
+
+  transition-property: background-color, border-color;
+  transition-duration: @btn-duration;
+
+  @media @tablet {
+    padding: 20px 30px;
+
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    font-size: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @btn-bg--active;
+    border-color: @btn-bg--active;
+    box-shadow: 5px 10px 40px 5px @btn-shadow-clr;
+  }
+
+  &--light {
+    color: @btn-text-clr--light;
+
+    border-color: @btn-border-clr--light;
+  }
+
+  &--round {
+    border-radius: 5px;
+  }
+}

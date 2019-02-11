@@ -1,0 +1,42 @@
+section#portfolio.portfolio.page__portfolio
+  .portfolio__container.centerer
+    h2.portfolio__title.title Портфолио
+
+    ul.portfolio__filters
+      li.portfolio__filter.portfolio__filter--active(data-filter="all")
+        a.portfolio__filter-link(href='') Все проекты
+      li.portfolio__filter(data-filter="design")
+        a.portfolio__filter-link(href='') Дизайн интерьеров
+      li.portfolio__filter(data-filter="finishing")
+        a.portfolio__filter-link(href='') Отделочные работы
+
+    .portfolio__carousel.carousel
+      .carousel__container
+        each item, index in portfolio
+          - var {name, filter, alt} = item;
+
+          div.portfolio__slide.carousel__item(data-type=item.type data-filter=filter)
+            h3.portfolio__slide-title= alt
+            a.portfolio__slide-link(href="")
+              +picture({
+                folder: 'portfolio',
+                name,
+                alt,
+                pictureClass: 'portfolio__picture',
+                imgClass: 'portfolio__img'
+              })
+
+      .portfolio__controls.controls.hidden
+        -
+          var arrow = {
+            name: 'arrow',
+            className: 'controls__arrow',
+            size: [38, 20]
+          };
+
+        button.controls__prev(type='button')
+          span.visually-hidden Предыдущий
+          +svg( arrow )
+        button.controls__next(type='button')
+          span.visually-hidden Следующий
+          +svg( arrow )

@@ -1,0 +1,35 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__container {
+  position: relative;
+  left: 0;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  transition: left @carousel-duration;
+}
+
+.carousel__item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  width: @mobile-centerer;
+
+  @media @tablet {
+    width: @tablet-centerer;
+  }
+
+  @media @desktop {
+    width: @desktop-centerer;
+  }
+}

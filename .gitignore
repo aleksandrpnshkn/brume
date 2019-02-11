@@ -1,8 +1,10 @@
 Thumbs.db
 psd/
 build/
+prebuild/
 source/css/
 source/img/portfolio/*/temp/
 source/img/video/
 node_modules/
-source/js/beta-script.js
+source/js/test/
+.vscode/

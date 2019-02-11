@@ -1,0 +1,25 @@
+section#reviews.reviews.page__reviews
+  .reviews__container
+    h2.title.reviews__title.centerer Отзывы наших клиентов
+
+    .reviews__carousel.carousel.centerer
+      .reviews__list.carousel__container
+        each review, index in reviews
+          blockquote.reviews__item.carousel__item
+            .reviews__image-wrapper
+              picture.reviews__picture
+                source(type='image/webp'
+                srcset=`blocks/reviews/img/${review.image}.webp,
+                        blocks/reviews/img/${review.image}@2x.webp 2x`)
+
+                img.reviews__image(alt=review.alt
+                src=`blocks/reviews/img/${review.image}.jpg`
+                srcset=`blocks/reviews/img/${review.image}@2x.jpg 2x`)
+              button.reviews__item-overlay(aria-hidden="true" type="button")
+            cite.reviews__author= review.author
+            b.reviews__service= review.service
+            p.reviews__text= review.text
+
+      .reviews__switches.switches.hidden(aria-hidden="true")
+        each review, idx in reviews
+          button.switches__btn(type='button')
